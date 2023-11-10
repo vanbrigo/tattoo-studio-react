@@ -4,5 +4,16 @@
     width: 100vw;
 
     background-color: rgb(55, 55, 55);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+.logoHeaderDesign{
+    height: 3em;
+    width: 10em;
+    background-image: url("../../images/logo-cat-horizontal.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 0.5em;
 }
