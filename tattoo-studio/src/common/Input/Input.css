@@ -3,3 +3,11 @@
     height: 3em;
     width: 30em;
 }
+
+.registerInput{
+    background-color: rgb(116, 75, 83);
+    height: 2.5em;
+    width: 30em;
+    color:black;
+    font-size: 1.2em;
+}

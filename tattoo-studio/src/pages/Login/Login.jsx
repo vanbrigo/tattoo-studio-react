@@ -3,6 +3,7 @@ import './Login.css'
 import { Input } from '../../common/Input/Input'
 import { Button } from '../../common/Button/Button'
 import { useNavigate } from 'react-router-dom'
+import { logUser } from '../../services/apiCalls'
 
 
 export const Login = () => {
@@ -24,7 +25,7 @@ export const Login = () => {
         logUser(credenciales)
         .then(
             resultado=> {
-            console.log(resultado)
+            console.log(resultado.data.token)
             navigate("/")
     })
         .catch(error=> console.log(error))
@@ -36,14 +37,16 @@ export const Login = () => {
                 name={"email"}
                 type={"email"}
                 style={"loginInput"}
-                lenght={"20"}
+                lenght={"30"}
+                placeholder={"email"}
                 functionProp={functionHandler}
             />
             <Input
                 name={"password"}
                 type={"password"}
                 style={"loginInput"}
-                lenght={"20"}
+                lenght={"30"}
+                placeholder={"password"}
                 functionProp={functionHandler}
             />
             <Button
