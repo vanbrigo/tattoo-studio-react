@@ -1,6 +1,6 @@
 import "./Input.css"
 
-export const Input = ({name,type,style,lenght,placeholder,functionProp}) => {
+export const Input = ({name,type,style,lenght,placeholder,functionProp,functionCheck}) => {
      return (
          <input
          name={name}
@@ -9,6 +9,7 @@ export const Input = ({name,type,style,lenght,placeholder,functionProp}) => {
          maxLength={lenght}
          placeholder={placeholder}
          onChange={(e)=>functionProp(e)}
+         onBlur={(e)=>functionCheck(e)}
          />
      )
 }

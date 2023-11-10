@@ -4,6 +4,7 @@ import './Register.css'
 import { Button } from '../../common/Button/Button'
 import { registerUser } from '../../services/apiCalls'
 import { useNavigate } from 'react-router-dom'
+import { validator } from '../../services/validations'
 
 
 export const Register = () => {
@@ -28,6 +29,17 @@ export const Register = () => {
             [e.target.name]:e.target.value
         }))
     }
+    const errorCheck = (e) => {
+
+        let error = "";
+    
+        error = validator(e.target.name, e.target.value);
+    
+        setCredencialesError((prevState) => ({
+            ...prevState,
+            [e.target.name + 'Error']: error,
+        }));
+      }
     const signIn =() =>{
         registerUser(credenciales)
         .then(
@@ -42,35 +54,43 @@ export const Register = () => {
             <Input
             name={"name"}
             type={"text"}
-            style={"registerInput"}
+            style={`registerInput ${credencialesError.nameError !== "" ? 'inputError' : ''}`}
             maxLenght={"30"}
             placeholder={"name"}
             functionProp={functionHandler}
+            functionCheck={errorCheck}
             />
+            <div className='errorText'>{credencialesError.nameError}</div>
             <Input
             name={"email"}
             type={"email"}
-            style={"registerInput"}
+            style={`registerInput ${credencialesError.emailError !== "" ? 'inputError' : ''}`}
             maxLenght={"30"}
             placeholder={"email"}
             functionProp={functionHandler}
+            functionCheck={errorCheck}
             />
+            <div className='errorText'>{credencialesError.emailError}</div>
             <Input
             name={"password"}
             type={"password"}
-            style={"registerInput"}
+            style={`registerInput ${credencialesError.passwordError !== "" ? 'inputError' : ''}`}
             maxLenght={"30"}
             placeholder={"password"}
             functionProp={functionHandler}
+            functionCheck={errorCheck}
             />
+            <div className='errorText'>{credencialesError.passwordError}</div>
             <Input
             name={"phone_number"}
             type={"text"}
-            style={"registerInput"}
-            maxLenght={"10"}
+            style={`registerInput ${credencialesError.phone_numberError !== "" ? 'inputError' : ''}`}
+            maxLenght={"15"}
             placeholder={"phone number"}
             functionProp={functionHandler}
+            functionCheck={errorCheck}
             />
+            <div className='errorText'>{credencialesError.phone_numberError}</div>
             <Button
             style={"loginButton"}
             functionToDo={signIn}

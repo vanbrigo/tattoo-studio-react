@@ -11,3 +11,8 @@
     color:black;
     font-size: 1.2em;
 }
+
+.inputError{
+    border: 0.1em red solid;
+    
+}
