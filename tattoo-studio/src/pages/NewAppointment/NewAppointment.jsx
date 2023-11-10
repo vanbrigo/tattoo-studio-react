@@ -45,15 +45,16 @@ export const NewAppointment = () => {
                   placeholder={"date"}
                   functionProp={functionHandler}
               />
-              <NativeSelect
-                  name={"time"}
-                  classNames={{root:'inputTimeDesign'}}
-                  size="lg"
-                  onChange={functionHandler}
-                  aria-label="time"
-                  withAsterisk
-                  data={['10:00', '11:00', '14:00', '15:00', '16:00']}
-              />
+              
+                  <label className="inputPickerLabel">Select a turn</label>
+                  <select name="time" onChange={(e) => functionHandler(e)} className='inputPickerDesign'>
+                      <option value="10:00">10:00</option>
+                      <option value="11:00">11:00</option>
+                      <option value="14:00">14:00</option>
+                      <option value="11:00">15:00</option>
+                      <option value="14:00">16:00</option>
+                  </select>
+              
               <InputDate
                   name={"tatto_artist"}
                   type={"number"}
@@ -63,9 +64,9 @@ export const NewAppointment = () => {
                   functionProp={functionHandler}
               />
               <Button
-              style='createAppointmentButton'
-              functionToDo={create}
-              title="Create"
+                  style='createAppointmentButton'
+                  functionToDo={create}
+                  title="Create"
               />
           </div>
       </div>

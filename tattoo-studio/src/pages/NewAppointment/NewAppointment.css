@@ -30,3 +30,14 @@
     width: 4em;
     background-color: rgb(68, 68, 139);
 }
+
+.inputPickerDesign{
+    height: 3em;
+    width: 7em;
+    background-color: cadetblue;
+}
+.inputPickerLabel{
+    color:black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+    font-size: 1.5em;
+}
