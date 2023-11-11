@@ -1,7 +1,9 @@
 .loginInput{
-    background-color: rgb(116, 75, 83);
+    background-color: rgba(116, 75, 83, 0.667);
     height: 3em;
     width: 30em;
+    color: black;
+    /* font-size: 1rem; */
 }
 
 .registerInput{
@@ -13,6 +15,6 @@
 }
 
 .inputError{
-    border: 0.1em red solid;
+    border: 0.12em red solid;
     
 }

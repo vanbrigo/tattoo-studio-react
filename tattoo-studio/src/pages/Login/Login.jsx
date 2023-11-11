@@ -51,6 +51,7 @@ export const Login = () => {
 
     return (
         <div className="loginDesign">
+            <div className='loginBox'>
             <Input
                 name={"email"}
                 type={"email"}
@@ -76,6 +77,7 @@ export const Login = () => {
             functionToDo={logIn}
             title={"Log in"}
             />
+            </div>
         </div>
     )
 }
