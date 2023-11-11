@@ -3,5 +3,13 @@
     width: 4em;
 
     background-color: rgb(55, 25, 83);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
 }
-
+.loginButton:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgb(41, 17, 60);
+}
