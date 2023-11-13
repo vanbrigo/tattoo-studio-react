@@ -15,7 +15,7 @@ export const Body = () =>{
             <Route path="/login" element={<Login />}/>
             <Route path="/register" element={<Register />}/>
             <Route path="/create-appointment" element={<NewAppointment />}/>
-            <Route path="tattoo-artist/my-schedule" element={<TattooArtistAppointments />}/>
+            <Route path="/my-schedule" element={<TattooArtistAppointments />}/>
             <Route path="/my-appointments" element={<UserAppointments />}/>
             <Route path="/profile" element={<Profile />}/> 
         </Routes>
