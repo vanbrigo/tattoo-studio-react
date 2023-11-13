@@ -2,17 +2,30 @@
 import React from 'react'
 import "./Header.css"
 import { HeaderButton } from '../HeaderButton/HeaderButton'
+import { useSelector, useDispatch } from "react-redux";
+import { logout, userData } from "../../pages/userSlice";
+
 
 export const Header = () => {
-    
+    const dispatch = useDispatch();
+  
+    const rdxCredentials = useSelector(userData);
+  
+    const logOutMe = () => {
+  
+      dispatch(logout( {credentials : ""}))
+  
+      navigate("/")
+    }
     return (
         <div className='headerDesign'>
            <div className='logoHeaderDesign'></div>
-           <div className='routesHeader'>
            <HeaderButton
            path={"/gallery"} 
            title="Gallery"
            />
+           {!rdxCredentials?.credentials.token ? (
+            <div className='routesHeader'>
            <HeaderButton
            path={"/login"} 
            title="Log in"
@@ -21,7 +34,21 @@ export const Header = () => {
            path={"/register"} 
            title="Sign in"
            />
-           </div>
+           </div>):(
+            <div className='routesHeader'>
+            <HeaderButton
+           path={"/my-appointments"} 
+           title={"My appointments"}
+           />
+            <HeaderButton
+           path={"/profile"} 
+           title={"Hola"}
+           />
+           <div onClick={logOutMe}>
+            <LinkButton path={"/"} title={"log out"} />  
+          </div>
+            </div>
+           )}
         </div>
     )
 }
