@@ -5,9 +5,12 @@ import { Button } from '../../common/Button/Button'
 import { useNavigate } from 'react-router-dom'
 import { logUser } from '../../services/apiCalls'
 import { validator } from '../../services/validations'
+import { useDispatch } from 'react-redux'
+import { login } from "../userSlice"
 
 export const Login = () => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     const [credenciales,setCredenciales] =useState({
         email:"",
@@ -43,7 +46,7 @@ export const Login = () => {
         logUser(credenciales)
         .then(
             resultado=> {
-            console.log(resultado.data.token)
+                dispatch(login({ credentials: resultado.data }))
             navigate("/")
     })
         .catch(error=> console.log(error))

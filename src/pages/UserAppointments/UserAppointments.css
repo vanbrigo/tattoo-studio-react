@@ -1,0 +1,10 @@
+.userAppointmentsDesign{
+    height: 88vh;
+    width: 100vw;
+
+    background-color: rgba(104, 104, 104, 0.702);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './AppointmentAvailableCard.css'
 
 export const AppointmentAvailableCard = ({date,time}) => {

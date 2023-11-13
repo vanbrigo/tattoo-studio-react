@@ -4,6 +4,7 @@ import { Login } from "../Login/Login";
 import { Register } from "../Register/Register";
 import { NewAppointment } from "../NewAppointment/NewAppointment";
 import { TattooArtistAppointments } from "../TattooArtistAppointments/TattooArtistAppointments";
+import { UserAppointments } from "../UserAppointments/UserAppointments";
 
 export const Body = () =>{
     return(
@@ -14,6 +15,7 @@ export const Body = () =>{
             <Route path="/register" element={<Register />}/>
             <Route path="/create-appointment" element={<NewAppointment />}/>
             <Route path="tattoo-artist/my-schedule" element={<TattooArtistAppointments />}/>
+            <Route path="/my-appointments" element={<UserAppointments />}/>
         </Routes>
         </>
     )
