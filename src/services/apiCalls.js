@@ -8,6 +8,10 @@ export const getMyAppointments = async (token) => {
     return await axios.get(`http://localhost:3000/user/myAppointments`,{headers:{Authorization:`Bearer ${token}`}})
 }
 
+export const getMyProfile = async (token) => {
+    return await axios.get(`http://localhost:3000/user/profile`,{headers:{Authorization:`Bearer ${token}`}})
+}
+
 export const logUser = async(body)=>{
     return await axios.post(`http://localhost:3000/user/login`,body)
 }

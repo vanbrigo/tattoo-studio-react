@@ -6,7 +6,6 @@ import { Button } from '../../common/Button/Button';
 import { createAppointment } from '../../services/apiCalls';
 import { useSelector } from 'react-redux';
 import { userData } from '../userSlice';
-import {jwtDecode} from 'jwt-decode'
 
 
 export const NewAppointment = () => {
