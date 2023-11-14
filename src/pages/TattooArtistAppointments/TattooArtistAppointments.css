@@ -13,6 +13,10 @@
     width: 70vw;
     display: grid;
     grid-template-columns:repeat(auto-fill, minmax(20em, 1fr));
-    background-color: aquamarine;
+    background-color: rgb(57, 68, 64);
 
+}
+
+.appointmentIsNotAvailable{
+    background-color: rgba(153, 22, 22, 0.608);
 }
