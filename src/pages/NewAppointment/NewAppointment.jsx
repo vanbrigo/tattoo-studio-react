@@ -4,20 +4,20 @@ import './NewAppointment.css'
 import { InputDate } from '../../common/InputDate/InputDate';
 import { Button } from '../../common/Button/Button';
 import { createAppointment } from '../../services/apiCalls';
+import { useSelector } from 'react-redux';
+import { userData } from '../userSlice';
+import {jwtDecode} from 'jwt-decode'
 
 
 export const NewAppointment = () => {
+    const rdxCredentials = useSelector(userData)
+    const token=rdxCredentials.credentials.token
     const [details,setDetails]=useState({
         date:"",
         time:"",
-        tattoo_artist:""
     })
-    useEffect(() => {
-            console.log(details.time)
-            console.log(details.date)
-      }, [details]);
 
-      const functionHandler = (e) => {
+    const functionHandler = (e) => {
         setDetails((prevState)=>({
             ...prevState,
             [e.target.name]:e.target.value
@@ -25,7 +25,7 @@ export const NewAppointment = () => {
        
     }
     const create=()=>{
-        createAppointment(details)
+        createAppointment(details,token)
         .then(
             resultado=> {
             console.log(resultado.data)
@@ -53,15 +53,6 @@ export const NewAppointment = () => {
                       <option value="11:00">15:00</option>
                       <option value="14:00">16:00</option>
                   </select>
-              
-              <InputDate
-                  name={"tatto_artist"}
-                  type={"number"}
-                  style='inputDateDesign'
-                  lenght={"10"}
-                  placeholder={"tattoo-artist"}
-                  functionProp={functionHandler}
-              />
               <Button
                   style='createAppointmentButton'
                   functionToDo={create}
