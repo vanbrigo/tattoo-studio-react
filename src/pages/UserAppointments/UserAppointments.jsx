@@ -26,6 +26,7 @@ export const UserAppointments=()=>{
 
     return(
         <div className="userAppointmentsDesign">
+            <div className="textAppointment">MY APPOINTMENTS</div>
             {appointments.length > 0
                     ? (<div className="appointmentsUser">
                             {appointments.map(appointment => {

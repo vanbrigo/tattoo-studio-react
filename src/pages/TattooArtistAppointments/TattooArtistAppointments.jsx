@@ -15,7 +15,7 @@ export const TattooArtistAppointments=()=>{
             getAllAppointmentsAvailableByTattooArtist(token)
             .then(
                 appointments =>{
-                    setAppointments(appointments.data)
+                    setAppointments(appointments.data.data)
                 }
                 
             )
@@ -26,7 +26,7 @@ export const TattooArtistAppointments=()=>{
 
     return(
         <div className="tattooArtistAppointmentsDesign">
-            {appointments.length > 0
+            {appointments.length>0
                     ? (<div className="appointmentsTattooArtist">
                             {appointments.map(appointment => {
                                 return (<AppointmentAvailableCard

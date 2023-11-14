@@ -8,3 +8,11 @@
     align-items: center;
 
 }
+.appointmentsTattooArtist{
+    height: 70vh;
+    width: 70vw;
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(20em, 1fr));
+    background-color: aquamarine;
+
+}

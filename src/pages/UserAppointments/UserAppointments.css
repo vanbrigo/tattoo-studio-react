@@ -4,7 +4,24 @@
 
     background-color: rgba(104, 104, 104, 0.702);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1em
+}
+
+.appointmentsUser{
+    height: 50vh;
+    width: 70vw;
+    background-color: rgba(41, 39, 43, 0.365);
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap:2em;
+}
+.textAppointment{
+    font-size: 4em;
+    color:black;
+    background-color: rgba(0, 0, 0, 0.538);
+    
 }
