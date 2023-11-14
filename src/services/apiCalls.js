@@ -12,6 +12,10 @@ export const getMyProfile = async (token) => {
     return await axios.get(`http://localhost:3000/user/profile`,{headers:{Authorization:`Bearer ${token}`}})
 }
 
+export const getTattooGallery = async () => {
+    return await axios.get(`http://localhost:3000/user/tattooArtist/gallery`)
+}
+
 export const logUser = async(body)=>{
     return await axios.post(`http://localhost:3000/user/login`,body)
 }
