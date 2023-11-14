@@ -5,6 +5,7 @@ import { getMyProfile } from "../../services/apiCalls"
 import { useSelector } from "react-redux"
 import { userData } from "../userSlice"
 import dayjs from 'dayjs'
+import { Button } from "../../common/Button/Button"
 
 
 export const Profile=()=>{
@@ -31,11 +32,7 @@ export const Profile=()=>{
     return(
     <div className="profileDesign">
         {!profile 
-        ?(<><Button
-            style={"profileButton"}
-            functionToDo={Navigate("/create-profile")}
-            title={"Create profile"}
-            /></>) 
+        ?(<>no tienes perfil</>) 
         :(<div className="profileData">
         <div>{profile.user.name}</div>
         <div>{profile.user.email}</div>
