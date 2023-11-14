@@ -1,5 +1,3 @@
-
-import React, { useEffect, useState } from 'react'
 import "./Header.css"
 import { HeaderButton } from '../HeaderButton/HeaderButton'
 import { useSelector, useDispatch } from "react-redux";

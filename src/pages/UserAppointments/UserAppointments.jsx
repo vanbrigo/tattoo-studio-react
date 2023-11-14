@@ -15,10 +15,12 @@ export const UserAppointments=()=>{
             getMyAppointments(token)
             .then(
                 appointments =>{
-                    setAppointments(appointments.data)
+                    setAppointments(appointments.data.data)
                 }  
             )
-            .catch(error=>console.log(error))
+            .catch(error=>
+                console.log(error)
+            )
         }
     },[appointments])
 
@@ -30,7 +32,7 @@ export const UserAppointments=()=>{
                                 return (<AppointmentCard
                                         key={appointment.id}
                                         date={appointment.appointmentA.date}
-                                        time={appointment.appointmentA.date}
+                                        time={appointment.appointmentA.time}
                                         tattooArtist={appointment.appointmentA.user.name}
                                         purpose={appointment.purpose}
                                         />

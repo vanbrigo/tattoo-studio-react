@@ -4,7 +4,7 @@
 
     background-color: rgba(104, 104, 104, 0.702);
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:2em;
 }

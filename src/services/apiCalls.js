@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-export const getAllAppointmentsAvailableByTattooArtist = async () => {
-    return await axios.get(`https://localhost:3000/user/tattooArtist/appointments`)
+export const getAllAppointmentsAvailableByTattooArtist = async (token) => {
+    return await axios.get(`http://localhost:3000/user/tattooArtist/appointments`,{headers:{Authorization:`Bearer ${token}`}})
 }
 
 export const getMyAppointments = async (token) => {
-    return await axios.get(`https://localhost:3000/user/myAppointments`,{headers:{Authorization:`Bearer ${token}`}})
+    return await axios.get(`http://localhost:3000/user/myAppointments`,{headers:{Authorization:`Bearer ${token}`}})
 }
 
 export const logUser = async(body)=>{
