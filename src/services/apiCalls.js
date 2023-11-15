@@ -35,3 +35,6 @@ export const createProfile = async(body,token)=>{
     return await axios.post(`http://localhost:3000/user/profile`,body,{headers:{Authorization:`Bearer ${token}`}})
 }
 
+export const takeAppointmentAvailable = async(body,token)=>{
+    return await axios.post(`localhost:3000/user/newAppointment`,body,{headers:{Authorization:`Bearer ${token}`}})
+}

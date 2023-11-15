@@ -19,7 +19,6 @@ export const CreateProfile = () => {
         address:""
     })
     const functionHandler = (e) => {
-        console.log(e.target.value)
         setDetails((prevState)=>({
             ...prevState,
             [e.target.name]:e.target.value

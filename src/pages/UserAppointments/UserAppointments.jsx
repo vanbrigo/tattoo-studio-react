@@ -48,7 +48,7 @@ export const UserAppointments=()=>{
             }
             <HeaderButton
            path={"/all-appointments-available"} 
-           title="Take an appointment"
+           title="Take new appointment"
            />
         </div>
     )

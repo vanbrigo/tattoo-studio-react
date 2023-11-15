@@ -35,6 +35,8 @@ export const TattooArtistAppointments=()=>{
                                         time={appointment.time}
                                         style='appointmentIsNotAvailable'
                                         state={appointment.is_available}
+                                        tattooArtist={""}
+                                        clickState={""}
                                         />
                                         )})
                             }

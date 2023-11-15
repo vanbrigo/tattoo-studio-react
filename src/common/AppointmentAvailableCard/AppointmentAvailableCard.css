@@ -1,8 +1,12 @@
 .appointmentCardDesign{
-    height: 5em;
+    height: 6em;
     width: 10em;
     background-color: rgba(95, 208, 104, 0.561);
     border-radius: 1em;
-    margin: 1em;
-    
+    margin: 1em;  
+}
+.appointmentCardDesign:hover{
+    background-color:  rgba(42, 99, 48, 0.561);
+    cursor: pointer;
+    color:grey;
 }
