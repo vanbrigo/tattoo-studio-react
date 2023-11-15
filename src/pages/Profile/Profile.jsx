@@ -8,16 +8,22 @@ import dayjs from 'dayjs'
 
 export const Profile=()=>{
     const [profile, setProfile]=useState()
+    const [messageError, setMessageError]=useState()
     const rdxCredentials = useSelector(userData)
     const token=rdxCredentials.credentials.token
     useEffect(()=>{
         if (!profile){
             getMyProfile(token)
             .then(
-                results =>{
+                results =>{ if(results.data.data !== null){
                     console.log(results.data.data)
                     setProfile(results.data.data)
+                }
+                else{
                     
+                }
+                console.log(results.data.data)
+                    setMessageError(results.data.data)
                 }  
             )
             .catch(error=>
@@ -30,7 +36,7 @@ export const Profile=()=>{
     return(
     <div className="profileDesign">
         {!profile 
-        ?(<>no tienes perfil</>) 
+        ?(<>{!messageError ?(<>te envio a crear perfil</>) :(<>No ha llegado nada</>)}</>) 
         :(<div className="profileData">
         <div>{profile.user.name}</div>
         <div>{profile.user.email}</div>
