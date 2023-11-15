@@ -9,11 +9,14 @@ import { TakeAppointment } from '../TakeAppointment/TakeAppointment'
 export const AppointmentsAvailable=()=>{
     const [appointments,setAppointments]= useState([])
     const [click,setClick]=useState(false)
+    const [idAppointment,setIdAppointment]=useState()
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
-    const handleClick=()=>{
+    const handleClick=(key)=>{
         setClick(!click)
+        setIdAppointment(key)
         console.log(click)
+        console.log(key)
     }
    
     useEffect(()=>{
@@ -21,7 +24,6 @@ export const AppointmentsAvailable=()=>{
             getAllAppointmentsAvailable(token)
             .then(
                 appointments =>{
-                    console.log(appointments.data.data)
                     setAppointments(appointments.data.data)
                 }
                 
@@ -32,7 +34,8 @@ export const AppointmentsAvailable=()=>{
     return (<div className='appointmentAvailableDesign'>
         {click &&
             <TakeAppointment
-                clickState={() => handleClick()}
+                id={idAppointment}
+                clickState={handleClick}
              />}
         {appointments.length > 0
             ? (<div className='appointmentsAvailable'>
@@ -44,7 +47,7 @@ export const AppointmentsAvailable=()=>{
                         style=''
                         state={appointment.is_available}
                         tattooArtist={appointment.user.name}
-                        clickState={() => handleClick()}
+                        clickState={() => handleClick(appointment.id)}
                     />
                     )
                 })
