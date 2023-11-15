@@ -15,8 +15,9 @@
     width: 70vw;
     background-color: rgba(41, 39, 43, 0.365);
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap:2em;
 }
 .textAppointment{

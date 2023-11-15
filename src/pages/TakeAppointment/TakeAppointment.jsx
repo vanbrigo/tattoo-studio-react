@@ -23,6 +23,7 @@ export const TakeAppointment=({clickState,id})=>{
     return(<div className='takeAppointmentDesign'>
     <div className='takeAppointmentBox'>
     <select name="purpose" onChange={(e) => functionHandler(e)} className='purposePickerDesign'>
+        <option value="">Pick a purpose</option>
         <option value="tattoo">Tattoo</option>
         <option value="piercing">Piercing</option>
     </select>
