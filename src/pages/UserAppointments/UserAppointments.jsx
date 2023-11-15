@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { HeaderButton } from '../../common/HeaderButton/HeaderButton'
 import { AppointmentCard } from "../../common/AppointmentCard/AppointmentCard"
 import "./UserAppointments.css"
 import { getMyAppointments } from "../../services/apiCalls"
@@ -45,6 +46,10 @@ export const UserAppointments=()=>{
                         <div>Nothing here</div>
                     )
             }
+            <HeaderButton
+           path={"/all-appointments-available"} 
+           title="Take an appointment"
+           />
         </div>
     )
 }

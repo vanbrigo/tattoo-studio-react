@@ -1,0 +1,2 @@
+import './TakeAppointment.css'
+

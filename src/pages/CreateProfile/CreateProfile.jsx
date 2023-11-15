@@ -19,6 +19,7 @@ export const CreateProfile = () => {
         address:""
     })
     const functionHandler = (e) => {
+        console.log(e.target.value)
         setDetails((prevState)=>({
             ...prevState,
             [e.target.name]:e.target.value
@@ -29,7 +30,7 @@ export const CreateProfile = () => {
         console.log()
     }
     const addProfile=()=>{
-        createProfile(details)
+        createProfile(details,token)
         .then(results=>{
             console.log(results.data)
             navigate('/')
@@ -40,14 +41,14 @@ export const CreateProfile = () => {
 
     return(<div className='createProfileDesign'>
         <InputDate
-            name={"Birthdate"}
+            name={"birthdate"}
             type={"date"}
             style='inputDateDesign'
             lenght={"10"}
             placeholder={"date"}
             functionProp={functionHandler}
             />
-            <select name="Gender" onChange={(e) => functionHandler(e)} className='genderPicker'>
+            <select name="gender" onChange={(e)=>functionHandler(e)} className='genderPicker'>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
                 <option value="non_binary">Non binary</option>

@@ -2,7 +2,6 @@ import "./Header.css"
 import { HeaderButton } from '../HeaderButton/HeaderButton'
 import { useSelector, useDispatch } from "react-redux";
 import { logout, userData } from "../../pages/userSlice";
-import { Navigate } from 'react-router-dom'
 import {jwtDecode} from 'jwt-decode'
 
 
@@ -16,21 +15,7 @@ export const Header = () => {
     const logOutMe = () => {
   
       dispatch(logout( {credentials : ""}))
-
-      // Navigate("/")
     }
-    // const [tokenDecoded,setTokenDecoded]=useState([])
-    // useEffect(()=>{
-    //   if(!rdxCredentials){
-        
-    //     setTokenDecoded(rdxCredentials.credentials.token)
-       
-    //   }
-    //   console.log(tokenDecoded)
-    //   console.log(rdxCredentials)
-     
-    // },[rdxCredentials])
-    
     
     return (
         <div className='headerDesign'>
