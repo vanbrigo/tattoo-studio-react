@@ -1,0 +1,17 @@
+.appointmentAvailableDesign{
+    height: 88vh;
+    width: 100vw;
+
+    background-color: rgba(104, 104, 104, 0.702);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.appointmentsAvailable{
+    height: 70vh;
+    width: 70vw;
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(20em, 1fr));
+    justify-content: center;
+    align-items: center;
+}

@@ -7,6 +7,7 @@ import { TattooArtistAppointments } from "../TattooArtistAppointments/TattooArti
 import { UserAppointments } from "../UserAppointments/UserAppointments";
 import { Profile } from "../Profile/Profile";
 import { Gallery } from "../Gallery/Gallery";
+import { AppointmentsAvailable } from "../AppointmentsAvailable/AppointmentsAvailable";
 
 export const Body = () =>{
     return(
@@ -20,6 +21,7 @@ export const Body = () =>{
             <Route path="/my-appointments" element={<UserAppointments />}/>
             <Route path="/profile" element={<Profile />}/> 
             <Route path="/gallery" element={<Gallery />}/> 
+            <Route path="/all-appointments-available" element={<AppointmentsAvailable/>}/> 
         </Routes>
         </>
     )
