@@ -5,8 +5,6 @@ import { getMyProfile } from "../../services/apiCalls"
 import { useSelector } from "react-redux"
 import { userData } from "../userSlice"
 import dayjs from 'dayjs'
-import { Button } from "../../common/Button/Button"
-
 
 export const Profile=()=>{
     const [profile, setProfile]=useState()
