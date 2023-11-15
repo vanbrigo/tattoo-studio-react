@@ -2,22 +2,11 @@
     height: 88vh;
     width: 100vw;
 
-    background-color: rgba(104, 104, 104, 0.702);
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-
-.backgroundHome{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    width: 40vw;
-
     background-image: url("../../images/logo.png");
     background-repeat: no-repeat;
     background-size: contain;
-
+    background-position: center center;
 }

@@ -22,6 +22,10 @@ export const Header = () => {
            <div className='logoHeaderDesign'></div>
            <div className='routesHeader'>
            <HeaderButton
+           path={"/"} 
+           title="Home"
+           />
+           <HeaderButton
            path={"/gallery"} 
            title="Gallery"
            />
