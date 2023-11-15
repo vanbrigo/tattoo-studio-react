@@ -21,3 +21,12 @@
 .createProfileButton:hover{
     cursor: pointer;
 }
+.takeAppointmentButton{
+    height: 2em;
+    width: 4em;
+    background-color: chocolate;
+    border-radius: 1em;
+}
+.takeAppointmentButton:hover{
+    cursor: pointer;
+}

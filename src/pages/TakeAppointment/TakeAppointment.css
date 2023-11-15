@@ -1,0 +1,22 @@
+.takeAppointmentDesign{
+    height: 88vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.569);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+}
+.takeAppointmentBox{
+    height: 20em;
+    width: 30em;
+    background-color: rgba(74, 39, 39, 0.796);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:2em;
+    position: absolute;
+}

@@ -5,7 +5,7 @@ import { userData } from '../userSlice'
 import { takeAppointmentAvailable } from '../../services/apiCalls'
 import { Button } from '../../common/Button/Button'
 
-export const TakeAppointment=()=>{
+export const TakeAppointment=({clickState})=>{
     const [purpose,setPurpose]=useState()
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
@@ -20,6 +20,7 @@ export const TakeAppointment=()=>{
     }
 
     return(<div className='takeAppointmentDesign'>
+    <div className='takeAppointmentBox'>
     <select name="purpose" onChange={(e) => functionHandler(e)} className='purposePickerDesign'>
         <option value="tattoo">Tattoo</option>
         <option value="piercing">Piercing</option>
@@ -29,5 +30,11 @@ export const TakeAppointment=()=>{
         functionToDo={takeIt}
         title={"Take"}
         />
+    <Button
+        style={"takeAppointmentButton"}
+        functionToDo={()=>clickState()}
+        title={"Close"}
+        />
+    </div>
     </div>)
 }
