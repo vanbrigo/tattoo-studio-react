@@ -1,0 +1,16 @@
+.allUsersDesign{
+    height: 88vh;
+    width: 100vw;
+
+    background-color: rgba(104, 104, 104, 0.702);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userCard{
+    height: 5em;
+    width: 40em;
+    background-color: darkcyan;
+    margin: 1em;
+    
+}

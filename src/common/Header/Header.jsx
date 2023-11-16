@@ -20,7 +20,34 @@ export const Header = () => {
     return (
         <div className='headerDesign'>
            <div className='logoHeaderDesign'></div>
+           {tokenDecoded.role=='super_admin' 
+           ?(
            <div className='routesHeader'>
+            <HeaderButton
+           path={"/all-users"} 
+           title="Users"
+           />
+           <HeaderButton
+           path={"/all-tattooArtist"} 
+           title="Tattoo Artist"
+           />
+           <HeaderButton
+           path={"/all-appointments-available"} 
+           title="Appointments available"
+           />
+           <HeaderButton
+           path={"/all-appointments-taken"} 
+           title="Appointments booked"
+           />
+           <div onClick={logOutMe}>
+            <HeaderButton 
+            path={"/"} 
+            title={"log out"} 
+            />  
+            </div>
+           </div>) 
+           :(
+            <div className='routesHeader'>
            <HeaderButton
            path={"/"} 
            title="Home"
@@ -58,6 +85,9 @@ export const Header = () => {
           </>
           )}
             </div>
+
+           )}
+           
            
         </div>
     )

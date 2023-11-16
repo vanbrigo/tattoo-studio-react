@@ -10,6 +10,7 @@ import { Gallery } from "../Gallery/Gallery";
 import { AppointmentsAvailable } from "../AppointmentsAvailable/AppointmentsAvailable";
 import { CreateProfile } from "../CreateProfile/CreateProfile";
 import { TakeAppointment } from "../TakeAppointment/TakeAppointment";
+import { AllUsers } from "../AllUsers/AllUsers";
 
 export const Body = () =>{
     return(
@@ -27,6 +28,7 @@ export const Body = () =>{
             <Route path="/all-appointments-available" element={<AppointmentsAvailable/>}/> 
             <Route path="/create-profile" element={<CreateProfile />}/> 
             <Route path="/take-appointment" element={<TakeAppointment />}/>
+            <Route path="/all-users" element={<AllUsers />}/>
         </Routes>
         </>
     )
