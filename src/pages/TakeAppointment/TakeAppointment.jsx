@@ -10,6 +10,7 @@ export const TakeAppointment=({clickState,id})=>{
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
     const idAppointment=id
+  
 
     const functionHandler = (e) => {
         setPurpose(e.target.value)

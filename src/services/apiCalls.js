@@ -39,3 +39,8 @@ export const takeAppointmentAvailable = async(purpose,idAppointment,token)=>{
     const body={purpose,appointment_available_id:idAppointment}
     return await axios.post(`http://localhost:3000/user/newAppointment`,body,{headers:{Authorization:`Bearer ${token}`}})
 }
+
+export const cancelAppointment = async(body,token)=>{
+    console.log(token)
+    return await axios.delete(`http://localhost:3000/user/cancelAppointment`,body,{headers:{Authorization:`Bearer ${token}`}})
+}

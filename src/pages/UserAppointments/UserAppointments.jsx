@@ -5,11 +5,20 @@ import "./UserAppointments.css"
 import { getMyAppointments } from "../../services/apiCalls"
 import { useSelector } from "react-redux"
 import { userData } from "../userSlice"
+import { CancelAppointment } from "../CancelAppointment/CancelAppointment"
 
 export const UserAppointments=()=>{
     const [appointments,setAppointments]= useState([])
+    const [click,setClick]=useState(false)
+    const [idAppointment,setIdAppointment]=useState()
     const rdxCredentials = useSelector(userData)
     const token= rdxCredentials.credentials.token
+
+    const handleClick=(key)=>{
+        setClick(!click)
+        setIdAppointment(key)
+        console.log(key)
+    }
 
     useEffect(()=>{
         if (appointments.length === 0){
@@ -27,7 +36,13 @@ export const UserAppointments=()=>{
 
     return(
         <div className="userAppointmentsDesign">
+            {click &&
+            <CancelAppointment
+                id={idAppointment}
+                clickState={handleClick}
+             />}
             <div className="textAppointment">MY APPOINTMENTS</div>
+            
             {appointments.length > 0
                     ? (<div className="appointmentsUser">
                             {appointments.map(appointment => {
@@ -37,6 +52,7 @@ export const UserAppointments=()=>{
                                         time={appointment.appointmentA.time}
                                         tattooArtist={appointment.appointmentA.user.name}
                                         purpose={appointment.purpose}
+                                        clickState={() => handleClick(appointment.id)}
                                         />
                                         )})
                             }

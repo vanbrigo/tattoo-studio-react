@@ -11,8 +11,8 @@
 }
 
 .appointmentsUser{
-    height: 50vh;
-    width: 70vw;
+    height: 55vh;
+    width: 75vw;
     background-color: rgba(41, 39, 43, 0.365);
     display: flex;
     flex-wrap: wrap;

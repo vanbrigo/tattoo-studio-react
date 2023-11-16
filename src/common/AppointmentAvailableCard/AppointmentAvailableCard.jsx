@@ -2,7 +2,7 @@ import './AppointmentAvailableCard.css'
 import dayjs from 'dayjs'
 
 export const AppointmentAvailableCard = ({date,time,style,state,tattooArtist,clickState}) => {
-    const dateFormated = dayjs(date).format('DD-MMMM-YYYY')
+    const dateFormated = dayjs(date).format('dddd-DD-MMMM-YYYY')
      return (
         <div onClick={()=>clickState()} className={`appointmentCardDesign ${!state ? style : ''}`}>
             <div>{dateFormated}</div>

@@ -12,10 +12,10 @@ export const AppointmentsAvailable=()=>{
     const [idAppointment,setIdAppointment]=useState()
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
+    
     const handleClick=(key)=>{
         setClick(!click)
         setIdAppointment(key)
-        console.log(click)
         console.log(key)
     }
    
@@ -25,12 +25,12 @@ export const AppointmentsAvailable=()=>{
             .then(
                 appointments =>{
                     setAppointments(appointments.data.data)
-                }
-                
+                }  
             )
             .catch(error=>console.log(error))
         }
     },[appointments])
+    
     return (<div className='appointmentAvailableDesign'>
         {click &&
             <TakeAppointment
