@@ -13,7 +13,7 @@ export const CancelAppointment=({clickState,id})=>{
 
     const cancelIt=()=>{
         cancelAppointment(idAppointment,token)
-        .then(results=>console.log(results.data))
+        .then(results=>console.log(results))
         .catch(error=>console.log(error))
     }
   

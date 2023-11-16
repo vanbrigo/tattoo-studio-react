@@ -5,7 +5,7 @@ import { userData } from '../userSlice'
 import { takeAppointmentAvailable } from '../../services/apiCalls'
 import { Button } from '../../common/Button/Button'
 
-export const TakeAppointment=({clickState,id})=>{
+export const TakeAppointment=({clickState,id,forceFunction})=>{
     const [purpose,setPurpose]=useState()
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
@@ -17,7 +17,12 @@ export const TakeAppointment=({clickState,id})=>{
         }
     const takeIt=()=>{
         takeAppointmentAvailable(purpose,idAppointment,token)
-        .then(results=>console.log(results.data))
+        .then(results=>{
+            console.log(results.data)
+            clickState()
+            forceFunction()
+
+        })
         .catch(error=>console.log(error))
     }
 
@@ -35,7 +40,7 @@ export const TakeAppointment=({clickState,id})=>{
         />
     <Button
         style={"takeAppointmentButton"}
-        functionToDo={(key)=>clickState(key)}
+        functionToDo={()=>clickState()}
         title={"Close"}
         />
     </div>

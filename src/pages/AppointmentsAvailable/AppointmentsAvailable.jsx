@@ -18,6 +18,9 @@ export const AppointmentsAvailable=()=>{
         setIdAppointment(key)
         console.log(key)
     }
+    const forceToUpdate=()=>{
+        setAppointments([])
+    }
    
     useEffect(()=>{
         if (appointments.length === 0){
@@ -36,6 +39,7 @@ export const AppointmentsAvailable=()=>{
             <TakeAppointment
                 id={idAppointment}
                 clickState={handleClick}
+                forceFunction={forceToUpdate}
              />}
         {appointments.length > 0
             ? (<div className='appointmentsAvailable'>
