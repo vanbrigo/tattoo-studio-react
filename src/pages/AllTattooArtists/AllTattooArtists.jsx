@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux'
 import './AllTattooArtists.css'
 import { useEffect, useState } from 'react'
-import { userData } from '../../userSlice'
-import { getAllTattooArtists } from '../../../services/apiCalls'
+import { userData } from '../userSlice'
+import { getAllTattooArtists } from '../../services/apiCalls'
 
 export const AllTattooArtists = () => {
     const [tattooArtists,setTattooArtists]=useState([])

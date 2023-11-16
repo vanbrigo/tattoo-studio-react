@@ -36,7 +36,7 @@ export const Header = () => {
            title="Appointments available"
            />
            <HeaderButton
-           path={"/all-appointments-taken"} 
+           path={"/all-appointments-booked"} 
            title="Appointments booked"
            />
            <div onClick={logOutMe}>

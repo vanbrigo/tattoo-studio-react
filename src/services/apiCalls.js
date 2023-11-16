@@ -12,6 +12,10 @@ export const getAllAppointmentsAvailable = async (token) => {
     return await axios.get(`http://localhost:3000/appointment_available/`,{headers:{Authorization:`Bearer ${token}`}})
 }
 
+export const getAllAppointmentsBooked = async (token) => {
+    return await axios.get(`http://localhost:3000/user/all-appointments-booked`,{headers:{Authorization:`Bearer ${token}`}})
+}
+
 export const getMyProfile = async (token) => {
     return await axios.get(`http://localhost:3000/user/profile`,{headers:{Authorization:`Bearer ${token}`}})
 }
@@ -50,3 +54,4 @@ export const cancelAppointment = async(body,token)=>{
     console.log(token)
     return await axios.delete(`http://localhost:3000/user/cancelAppointment`,body,{headers:{Authorization:`Bearer ${token}`}})
 }
+
