@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import "./Profile.css"
-import { Navigate } from "react-router-dom"
 import { getMyProfile } from "../../services/apiCalls"
 import { useSelector } from "react-redux"
 import { userData } from "../userSlice"
 import dayjs from 'dayjs'
+import { CreateProfile } from "../CreateProfile/CreateProfile"
 
 export const Profile=()=>{
     const [profile, setProfile]=useState()
@@ -36,7 +36,7 @@ export const Profile=()=>{
     return(
     <div className="profileDesign">
         {!profile 
-        ?(<>{!messageError ?(<>te envio a crear perfil</>) :(<>No ha llegado nada</>)}</>) 
+        ?(<>{!messageError ?(<CreateProfile />) :(<>No ha llegado nada</>)}</>) 
         :(<div className="profileData">
         <div>{profile.user.name}</div>
         <div>{profile.user.email}</div>
