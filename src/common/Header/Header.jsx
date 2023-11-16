@@ -28,7 +28,7 @@ export const Header = () => {
            title="Users"
            />
            <HeaderButton
-           path={"/all-tattooArtist"} 
+           path={"/all-tattoo-artists"} 
            title="Tattoo Artist"
            />
            <HeaderButton

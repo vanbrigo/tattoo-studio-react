@@ -1,0 +1,11 @@
+.allTattooArtistsDesign{
+    height: 88vh;
+    width: 100vw;
+
+    background-color: rgba(104, 104, 104, 0.702);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}

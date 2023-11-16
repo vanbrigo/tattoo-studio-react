@@ -11,6 +11,7 @@ import { AppointmentsAvailable } from "../AppointmentsAvailable/AppointmentsAvai
 import { CreateProfile } from "../CreateProfile/CreateProfile";
 import { TakeAppointment } from "../TakeAppointment/TakeAppointment";
 import { AllUsers } from "../AllUsers/AllUsers";
+import { AllTattooArtists } from "../AllUsers/AllTattooArtists/AllTattooArtists";
 
 export const Body = () =>{
     return(
@@ -29,6 +30,7 @@ export const Body = () =>{
             <Route path="/create-profile" element={<CreateProfile />}/> 
             <Route path="/take-appointment" element={<TakeAppointment />}/>
             <Route path="/all-users" element={<AllUsers />}/>
+            <Route path="/all-tattoo-artists" element={<AllTattooArtists />}/>
         </Routes>
         </>
     )

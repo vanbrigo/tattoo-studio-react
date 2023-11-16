@@ -18,6 +18,9 @@ export const getMyProfile = async (token) => {
 export const getAllUsers = async (token) => {
     return await axios.get(`http://localhost:3000/user/superAdmin/clients`,{headers:{Authorization:`Bearer ${token}`}})
 }
+export const getAllTattooArtists = async (token) => {
+    return await axios.get(`http://localhost:3000/user/tattooArtistsAvailable`,{headers:{Authorization:`Bearer ${token}`}})
+}
 
 export const getTattooGallery = async () => {
     return await axios.get(`http://localhost:3000/user/tattooArtist/gallery`)

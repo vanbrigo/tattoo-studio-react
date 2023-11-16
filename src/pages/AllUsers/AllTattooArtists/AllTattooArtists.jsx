@@ -1,42 +1,39 @@
-import './AllUsers.css'
-import { useEffect, useState } from "react"
-import { getAllUsers } from "../../services/apiCalls"
-import { useSelector } from "react-redux"
-import { userData } from "../userSlice"
+import { useSelector } from 'react-redux'
+import './AllTattooArtists.css'
+import { useEffect, useState } from 'react'
+import { userData } from '../../userSlice'
+import { getAllTattooArtists } from '../../../services/apiCalls'
 
-
-
-export const AllUsers = () => {
-    const [users,setUsers]=useState([])
+export const AllTattooArtists = () => {
+    const [tattooArtists,setTattooArtists]=useState([])
     const rdxCredentials=useSelector(userData)
     const token= rdxCredentials.credentials.token
 
     useEffect(()=>{
-        if (users.length === 0){
-            getAllUsers(token)
+        if (tattooArtists.length === 0){
+            getAllTattooArtists(token)
             .then(
                 results =>{
-                    setUsers(results.data.data)    
+                    setTattooArtists(results.data.data)    
                     console.log(results.data.data)
                 }
                 
             )
             .catch(error=>console.log(error))
         }
-    },[users])
+    },[tattooArtists])
 
     return (
-        <div className="allUsersDesign">
-            {users.length > 0
+        <div className="allTattooArtistsDesign">
+            {tattooArtists.length > 0
                 ? (<>
-                    {users.map(user => {
+                    {tattooArtists.map(user => {
                         return (<div
                             className='userCard'
                             key={user.id}>
                             <div >{user.name}</div>
                             <div>{user.email}</div>
                             <div>{user.phone_number}</div>
-                            <div>{user.is_active.toString()}</div>
                         </div>
                         )
                     })
