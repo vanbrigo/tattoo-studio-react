@@ -33,8 +33,9 @@ export const AllAppointmentsBooked = () => {
                             key={appointment.id}>
                             <div >{dayjs(appointment.date).format('dddd-DD-MMMM-YYYY')}</div>
                             <div>{appointment.time}</div>
-                            <div>{appointment.user.name}</div>
-                            <div>{appointment.appointment.purpose}</div>
+                            <div>Tattoo Artist: {appointment.user.name}</div>
+                            <div>Purpose: {appointment.appointment.purpose}</div>
+                            <div>User: {appointment.appointment.user_id}</div>
                         </div>
                         )
                     })
