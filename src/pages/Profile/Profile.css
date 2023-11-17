@@ -2,19 +2,37 @@
     height: 88vh;
     width: 100vw;
 
-    background-color: rgba(104, 104, 104, 0.702);
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .profileData{
-    height: 60vh;
-    width: 60vw;
-    background-color: rgb(139, 98, 37);
+    height: 40em;
+    width: 30em;
+    background-color: rgb(185, 184, 182);
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    gap:2em
+    gap:0.5em;
+    border-radius: 1em;
 }
-
+.imageUser{
+    height: 12em;
+    width: 12em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6em;
+    display: flex;
+    background-position: center center;
+    background-image: url(../../images/without-pic.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.profileBox{
+    color:black;
+    font-size: 1.3em;
+    background-color: #ffffff;
+    height: 2em;
+    width: 10em;
+}

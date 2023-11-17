@@ -38,11 +38,12 @@ export const Profile=()=>{
         {!profile 
         ?(<>{!messageError ?(<CreateProfile />) :(<>No ha llegado nada</>)}</>) 
         :(<div className="profileData">
-        <div>{profile.user.name}</div>
-        <div>{profile.user.email}</div>
-        <div>{dayjs(profile.birthdate).format('DD-MM-YYYY')}</div>
-        <div>{profile.gender}</div>
-        <div>{profile.address}</div>
+        <div className="imageUser"></div>
+        <div className='profileBox'>{profile.user.name}</div>
+        <div className='profileBox'>{profile.user.email}</div>
+        <div className='profileBox'>{dayjs(profile.birthdate).format('DD-MM-YYYY')}</div>
+        <div className='profileBox'>{profile.gender}</div>
+        <div className='profileBox'>{profile.address}</div>
     </div>)}
     </div>)
 }
