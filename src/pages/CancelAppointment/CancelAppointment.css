@@ -1,7 +1,7 @@
 .cancelAppointmentDesign{
-    height: 88vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.569);
+    height: 60vh;
+    width: 60vw;
+    background-color: rgba(0, 0, 0, 0.338);
 
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@
 .cancelAppointmentBox{
     height: 20em;
     width: 30em;
-    background-color: rgba(74, 39, 39, 0.796);
+    background-color: rgba(255, 255, 255, 0.732);
     display: flex;
     justify-content: center;
     flex-direction: column;

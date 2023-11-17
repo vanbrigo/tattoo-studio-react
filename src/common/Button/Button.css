@@ -31,11 +31,32 @@
     cursor: pointer;
 }
 .cancelAppointmentButton{
-    height: 4em;
-    width: 8em;
-    background-color: rgb(210, 30, 30);
+    height: 2.5em;
+    width: 10em;
+    background-color: rgba(210, 30, 30, 0.859);
     border-radius: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 1.2em;
 }
 .cancelAppointmentButton:hover{
     cursor: pointer;
+    background-color: rgba(164, 23, 23, 0.859);
+}
+.closeButton{
+    background-color: rgba(76, 75, 75, 0.859); 
+    height: 2em;
+    width: 2em;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+}
+.closeButton:hover{
+    cursor: pointer;
+    background-color: rgb(75, 74, 74);
 }

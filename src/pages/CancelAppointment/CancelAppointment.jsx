@@ -30,9 +30,9 @@ export const CancelAppointment=({clickState,id,forceFunction})=>{
         title={"Cancel appointment"}
         />
     <Button
-        style={"cancelAppointmentButton"}
+        style={"closeButton"}
         functionToDo={(key)=>clickState(key)}
-        title={"Close"}
+        title={"X"}
         />
     </div>
     </div>)
