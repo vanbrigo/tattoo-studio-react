@@ -50,6 +50,7 @@ export const TattooArtistAppointments=()=>{
                         <div>Nothing here</div>
                     )
             }
+            
         </div>
     )
 }

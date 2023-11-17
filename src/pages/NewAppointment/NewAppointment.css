@@ -2,7 +2,7 @@
     height: 88vh;
     width: 100vw;
 
-    background-color: rgba(104, 104, 104, 0.702);
+    background-color: rgba(255, 255, 255, 0.931);
     display: flex;
     justify-content:center;
     align-items: center;
@@ -12,8 +12,8 @@
 
 .newAppointmentBox{
     height: 30em;
-    width: 40em;
-    background-color: rgb(173, 173, 152);
+    width: 30em;
+    background-color: rgb(214, 212, 212);
     padding: 3em;
     display: flex;
     justify-content:center;
@@ -26,18 +26,23 @@
     width: 20em;
 }
 .createAppointmentButton{
-    height: 3em;
-    width: 4em;
-    background-color: rgb(68, 68, 139);
+    height: 2.5em;
+    width: 4.5em;
+    background-color: rgb(52, 144, 97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5em;
+    font-weight: 600;
+}
+.createAppointmentButton:hover{
+    background-color:  rgb(33, 95, 63);
+    cursor: pointer;
 }
 
 .inputPickerDesign{
     height: 3em;
-    width: 7em;
-    background-color: cadetblue;
-}
-.inputPickerLabel{
-    color:black;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
-    font-size: 1.5em;
+    width: 15em;
+    background-color: rgb(61, 63, 63);
+    font-size: 1.1em;
 }

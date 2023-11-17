@@ -1,5 +1,7 @@
 .inputDateDesign{
-    height: 3em;
-    width: 20em;
-    background-color: rgb(104, 95, 114);
+    height: 4em;
+    width: 18em;
+    border: 0;
+    background-color: rgb(61, 63, 63);
+    font-size: 1.1em;
 }
