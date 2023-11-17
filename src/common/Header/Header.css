@@ -3,16 +3,16 @@
     height: 12vh;
     width: 100vw;
 
-    background-color: rgb(0, 0, 0);
+    background-color:  #f0f0f0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 .logoHeaderDesign{
-    height: 3em;
-    width: 15vw;
-    background-image: url("../../images/logo-cat-horizontal.png");
+    height: 4em;
+    width: 14vw;
+    background-image: url("../../images/cat-logo-small.png");
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: 0.5em;

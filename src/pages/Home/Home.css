@@ -1,3 +1,10 @@
+
+.homeBackground{
+    height: 88vh;
+    width: 100vw;
+    background-color: #ffffff; 
+}
+
 .homeDesign{
     height: 88vh;
     width: 100vw;
@@ -5,8 +12,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../../images/logo.png");
+    background-image: url("../../images/cat-tattoo-studio-logo.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+}
+.homeBox{
+    height: 10em;
+    width: 100vw;
+
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.homeDesign2{
+    height: 10em;
+    width: 100vw;
+
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(74, 74, 74);
+    font-size: 2em;
+    
+}
+.bigger{
+    height: 15em;
 }

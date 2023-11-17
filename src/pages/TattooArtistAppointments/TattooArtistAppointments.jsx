@@ -18,7 +18,6 @@ export const TattooArtistAppointments=()=>{
                 appointments =>{
                     setAppointments(appointments.data.data)
                 }
-                
             )
             .catch(error=>console.log(error))
         }
