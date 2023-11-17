@@ -2,18 +2,18 @@
     height: 88vh;
     width: 100vw;
 
-    background-color: rgba(104, 104, 104, 0.702);
+    background-color: rgba(255, 255, 255, 0.901);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .appointmentsAvailable{
-    height: 70vh;
-    width: 70vw;
-    background-color: rgba(0, 0, 0, 0.413);
-    display: flex;
+    height: 35em;
+    width: 60em;
+    background-color: rgba(151, 150, 150, 0.413);
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(20em, 1fr));
     flex-direction: column;
-    flex-wrap: wrap;
     justify-items: center;
     align-items: center;
 }

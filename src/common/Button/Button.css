@@ -24,11 +24,16 @@
 .takeAppointmentButton{
     height: 2em;
     width: 4em;
-    background-color: chocolate;
+    background-color: rgb(18, 135, 57);
     border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
 }
 .takeAppointmentButton:hover{
     cursor: pointer;
+    background-color:rgb(11, 88, 37) ;
 }
 .cancelAppointmentButton{
     height: 2.5em;

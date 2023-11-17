@@ -1,8 +1,7 @@
 .takeAppointmentDesign{
-    height: 88vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.569);
-
+    height: 80vh;
+    width: 80vw;
+    
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -12,11 +11,18 @@
 .takeAppointmentBox{
     height: 20em;
     width: 30em;
-    background-color: rgba(74, 39, 39, 0.796);
+    background-color: rgba(255, 255, 255, 0.732);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap:2em;
     position: absolute;
+}
+.purposePickerDesign{
+    width: 10em;
+    height: 3em;
+    font-size: 1em;
+    border-radius: 1em;
+    background-color: rgb(125, 129, 129);
 }

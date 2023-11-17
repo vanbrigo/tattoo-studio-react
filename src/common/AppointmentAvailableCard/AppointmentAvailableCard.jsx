@@ -7,7 +7,7 @@ export const AppointmentAvailableCard = ({date,time,style,state,tattooArtist,cli
         <div onClick={()=>clickState()} className={`appointmentCardDesign ${!state ? style : ''}`}>
             <div>{dateFormated}</div>
             <div>{time}</div>
-            <div>{tattooArtist}</div>
+            <div>Tattoo Artist: {tattooArtist}</div>
         </div>
      )
 }

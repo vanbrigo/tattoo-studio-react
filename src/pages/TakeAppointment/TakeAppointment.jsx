@@ -39,9 +39,9 @@ export const TakeAppointment=({clickState,id,forceFunction})=>{
         title={"Take"}
         />
     <Button
-        style={"takeAppointmentButton"}
+        style={"closeButton"}
         functionToDo={()=>clickState()}
-        title={"Close"}
+        title={"X"}
         />
     </div>
     </div>)
