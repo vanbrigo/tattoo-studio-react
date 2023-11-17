@@ -1,7 +1,16 @@
 .appointmentCard{
-    height: 6em;
-    width: 16em;
+    height: 3em;
+    width: 50em;
     background-color: rgba(163, 154, 201, 0.561);
     border-radius: 1em;
-    margin: 2em;
+    margin: 1em;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.appointmentCard:hover{
+    background-color: rgba(139, 127, 195, 0.561);
+    cursor: pointer;
 }

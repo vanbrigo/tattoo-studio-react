@@ -7,8 +7,8 @@ export const AppointmentCard = ({date,time,tattooArtist,purpose,clickState}) => 
         <div onClick={()=>clickState()} className="appointmentCard">
             <div>{dateFormated}</div>
             <div>{time}</div>
-            <div>{tattooArtist}</div>
-            <div>{purpose}</div>
+            <div>Tattoo Artist: {tattooArtist}</div>
+            <div>Purpose: {purpose}</div>
         </div>
      )
 }

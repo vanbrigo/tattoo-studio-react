@@ -46,8 +46,11 @@ export const UserAppointments=()=>{
                 clickState={handleClick}
                 forceFunction={forceToUpdate}
              />}
-            <div className="textAppointment">MY APPOINTMENTS</div>
-            
+            <HeaderButton
+           path={"/all-appointments-available"} 
+           title="Take new appointment"
+           />
+           <div className="textAppointment"></div>
             {appointments.length > 0
                     ? (<div className="appointmentsUser">
                             {appointments.map(appointment => {
@@ -67,10 +70,7 @@ export const UserAppointments=()=>{
                         <div>Nothing here</div>
                     )
             }
-            <HeaderButton
-           path={"/all-appointments-available"} 
-           title="Take new appointment"
-           />
+            
         </div>
     )
 }

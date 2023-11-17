@@ -2,27 +2,32 @@
     height: 88vh;
     width: 100vw;
 
-    background-color: rgba(104, 104, 104, 0.702);
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:1em
+    gap:0.5em
 }
 
 .appointmentsUser{
-    height: 55vh;
-    width: 75vw;
-    background-color: rgba(41, 39, 43, 0.365);
+    height: 30em;
+    width: 60em;
+    background-color: rgba(156, 154, 159, 0.365);
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:2em;
+    flex-wrap: wrap;
+    
 }
 .textAppointment{
-    font-size: 4em;
-    color:black;
-    background-color: rgba(0, 0, 0, 0.538);
-    
+    height: 5em;
+    width: 26em;
+    background-color: rgba(255, 255, 255, 0.538);
+    background-image: url(../../images/my-appointments.png);
+    display: flex;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
