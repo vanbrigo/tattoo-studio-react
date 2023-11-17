@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import { userData } from '../userSlice'
 
 
-export const CancelAppointment=({clickState,id})=>{
+export const CancelAppointment=({clickState,id,forceFunction})=>{
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
     const idAppointment=id
@@ -13,7 +13,11 @@ export const CancelAppointment=({clickState,id})=>{
 
     const cancelIt=()=>{
         cancelAppointment(idAppointment,token)
-        .then(results=>console.log(results))
+        .then(results=>{
+            console.log(results)
+            clickState()
+            forceFunction()
+        })
         .catch(error=>console.log(error))
     }
   

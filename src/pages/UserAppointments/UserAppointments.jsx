@@ -20,6 +20,10 @@ export const UserAppointments=()=>{
         console.log(key)
     }
 
+    const forceToUpdate=()=>{
+        setAppointments([])
+    }
+
     useEffect(()=>{
         if (appointments.length === 0){
             getMyAppointments(token)
@@ -40,6 +44,7 @@ export const UserAppointments=()=>{
             <CancelAppointment
                 id={idAppointment}
                 clickState={handleClick}
+                forceFunction={forceToUpdate}
              />}
             <div className="textAppointment">MY APPOINTMENTS</div>
             

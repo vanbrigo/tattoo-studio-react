@@ -4,6 +4,7 @@ import { AppointmentAvailableCard } from "../../common/AppointmentAvailableCard/
 import { useSelector } from "react-redux"
 import { userData } from "../userSlice"
 import { getAllTattooArtistAppointments } from "../../services/apiCalls"
+import { HeaderButton } from "../../common/HeaderButton/HeaderButton"
 
 export const TattooArtistAppointments=()=>{
     const [appointments,setAppointments]= useState([])
@@ -46,6 +47,10 @@ export const TattooArtistAppointments=()=>{
                         <div>Nothing here</div>
                     )
             }
+            <HeaderButton
+           path={"/create-appointment"} 
+           title="Create appointment"
+           />
         </div>
     )
 }
