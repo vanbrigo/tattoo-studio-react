@@ -1,9 +1,14 @@
 .galleryCard{
-    height: 15em;
-    width: 15em;
+    height: 12em;
+    width: 12em;
     font-size: 1.2em;
-    color:rgb(177, 172, 68)
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
 }
 .tattooImage{
-    height: 12em;
+    height: 10em;
+    width: 10em;
 }

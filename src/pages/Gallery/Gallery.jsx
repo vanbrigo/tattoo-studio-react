@@ -24,13 +24,12 @@ export const Gallery = () => {
 
      return (
          <div className="GalleryDesign">
-            <div className='backgroundGallery'> 
+            
             {portfolio.length>0
-                    ? (<div className='portfolioTattooArtist'>
+                    ? (<div className='galleryBox'>
                             {portfolio.map(portfolio => {
                                 return (<GalleryCard 
                                          key={portfolio.id}
-                                         title={portfolio.title}
                                          image={portfolio.image_url}
                                          tattooArtist={portfolio.name}
                                         />
@@ -42,7 +41,7 @@ export const Gallery = () => {
                         <div>Nothing here</div>
                     )
             }
-            </div>
+            
          </div>
      )
 }
