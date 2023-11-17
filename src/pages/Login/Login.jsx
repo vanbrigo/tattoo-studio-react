@@ -55,20 +55,22 @@ export const Login = () => {
     return (
         <div className="loginDesign">
             <div className='loginBox'>
+                <div className='loginCredentials'>Email</div>
             <Input
                 name={"email"}
                 type={"email"}
-                style={`loginInput ${credencialesError.emailError !== "" ? 'inputError' : ''}`}
+                style={`loginInputDesign ${credencialesError.emailError !== "" ? 'inputError' : ''}`}
                 lenght={"30"}
                 placeholder={"email"}
                 functionProp={functionHandler}
                 functionCheck={errorCheck}
             />
             <div className='errorText'>{credencialesError.emailError}</div>
+                <div className='loginCredentials'>Password</div>
             <Input
                 name={"password"}
                 type={"password"}
-                style={`loginInput ${credencialesError.passwordError !== "" ? 'inputError' : ''}`}
+                style={`loginInputDesign ${credencialesError.passwordError !== "" ? 'inputError' : ''}`}
                 lenght={"30"}
                 placeholder={"password"}
                 functionProp={functionHandler}

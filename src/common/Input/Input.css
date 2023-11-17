@@ -1,13 +1,16 @@
-.loginInput{
-    background-color: rgba(116, 75, 83, 0.667);
-    height: 3em;
-    width: 30em;
-    color: black;
-    /* font-size: 1rem; */
+.loginInputDesign{
+    height: 2em;
+    width: 20em;
+    margin: 1em;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.497);
+    border-radius: 1em;
+    border-width: 0;
+    color: whitesmoke;
 }
 
 .registerInput{
-    background-color: rgb(116, 75, 83);
+    background-color: rgb(253, 253, 253);
     height: 2.5em;
     width: 30em;
     color:black;
@@ -15,6 +18,6 @@
 }
 
 .inputError{
-    border: 0.12em red solid;
+    border: 0.12em rgb(158, 18, 18) solid;
     
 }
