@@ -2,12 +2,24 @@
     height: 88vh;
     width: 100vw;
 
-    background-color: rgba(104, 104, 104, 0.702);
+    background-color: rgba(255, 255, 255, 0.931);
     display: flex;
     justify-content:center;
     align-items: center;
     flex-direction: column;
     gap:2em
+}
+.registerBox{
+    height: 48em;
+    width: 35em;
+    background-color: rgba(167, 167, 167, 0.689);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap:1.5em;
+    border-radius: 2em;
+    margin: 1em;
 }
 
 .errorText{

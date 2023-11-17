@@ -64,7 +64,7 @@ export const Header = () => {
            />
            <HeaderButton
            path={"/register"} 
-           title="Sign in"
+           title="Sign up"
            />
            </>):(
             <>
@@ -74,7 +74,7 @@ export const Header = () => {
            />
             <HeaderButton
            path={tokenDecoded.role ==='user'?("/my-appointments"):("/my-schedule")} 
-           title={"My appointments"}
+           title={tokenDecoded.role ==='user'?("My appointments"):("My schedule")}
            />
            <div onClick={logOutMe}>
             <HeaderButton 

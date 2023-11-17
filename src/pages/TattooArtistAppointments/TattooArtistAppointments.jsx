@@ -26,6 +26,10 @@ export const TattooArtistAppointments=()=>{
 
     return(
         <div className="tattooArtistAppointmentsDesign">
+            <HeaderButton
+           path={"/create-appointment"} 
+           title="Create appointment"
+           />
             {appointments.length>0
                     ? (<div className='appointmentsTattooArtist'>
                             {appointments.map(appointment => {
@@ -46,10 +50,6 @@ export const TattooArtistAppointments=()=>{
                         <div>Nothing here</div>
                     )
             }
-            <HeaderButton
-           path={"/create-appointment"} 
-           title="Create appointment"
-           />
         </div>
     )
 }

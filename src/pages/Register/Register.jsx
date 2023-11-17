@@ -45,12 +45,13 @@ export const Register = () => {
         .then(
             resultado=> {
             console.log(resultado)
-            // navigate("/")
+
     })
         .catch(error=> console.log(error))
     }
      return (
          <div className="registerDesign">
+            <div className='registerBox'>
             <Input
             name={"name"}
             type={"text"}
@@ -92,10 +93,11 @@ export const Register = () => {
             />
             <div className='errorText'>{credencialesError.phone_numberError}</div>
             <Button
-            style={"loginButton"}
+            style={"loginButton signUpButton"}
             functionToDo={signIn}
-            title={"Sign in"}
+            title={"Sign up"}
             />
+            </div>
          </div>
      )
 }
