@@ -3,11 +3,13 @@ import { HeaderButton } from '../HeaderButton/HeaderButton'
 import { useSelector, useDispatch } from "react-redux";
 import { logout, userData } from "../../pages/userSlice";
 import {jwtDecode} from 'jwt-decode'
+import { useNavigate } from "react-router-dom";
 
 
 export const Header = () => {
     const dispatch = useDispatch();
     const rdxCredentials = useSelector(userData);
+    const navigate=useNavigate()
     let tokenDecoded={}
     if (rdxCredentials.credentials.token){
       tokenDecoded = jwtDecode(rdxCredentials.credentials.token)
@@ -19,7 +21,7 @@ export const Header = () => {
     
     return (
         <div className='headerDesign'>
-           <div className='logoHeaderDesign'></div>
+           <div className='logoHeaderDesign' onClick={()=>navigate('/')}></div>
            {tokenDecoded.role=='super_admin' 
            ?(
            <div className='routesHeader'>

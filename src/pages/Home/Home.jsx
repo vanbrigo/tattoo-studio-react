@@ -3,7 +3,7 @@ import './Home.css'
 
 export const Home = () => {
     return (
-        <Container className="homeBackground">
+        <Container fluid className="homeBackground">
         
             <Row className='homeDesign'></Row>
             <Col className='homeDesign2 text-center'>
@@ -14,10 +14,10 @@ export const Home = () => {
                 <Col sm={12} lg={6} xl={2} xxl={2} className='boxImage'>
                 <img className='imageBox' src='https://www.estudiotatuajesmadrid.com/wp-content/uploads/2021/05/im3.jpg'></img>
                 </Col>
-                <Col sm={12} lg={6} xl={2} xxl={2} className='boxImage d-none d-md-block'>
+                <Col sm={12} lg={6} xl={2} xxl={2} className='boxImage '>
                 <img className='imageBox' src='https://www.estudiotatuajesmadrid.com/wp-content/uploads/2021/05/im2.jpg'></img>
                 </Col>
-                <Col sm={12} lg={6} xl={2} xxl={2} className='boxImage d-none d-md-block'>
+                <Col sm={12} lg={6} xl={2} xxl={2} className='boxImage '>
                 <img className='imageBox' src='https://www.estudiotatuajesmadrid.com/wp-content/uploads/2021/05/im4.jpg'></img>
                 </Col>
             </Row>
@@ -29,7 +29,21 @@ export const Home = () => {
                 All of this makes Velvet Underground Tattoo<br /> a reassuringly clean and comfortable environment to be inked.
                 </Col>
             </Row>
+            <Row className='tattooArtistHome'>
+            <Col sm={12} md={4} lg={4} xl={4} xxl={4}>
+                <img className=' img-fluid' src='https://img.freepik.com/foto-gratis/retrato-estudio-chica-rubia-maquillaje-original-cuello-tatuaje-muslo-vestido-negro-fondo-oscuro-sentado-escalera-roja_627829-10209.jpg?size=626&ext=jpg&ga=GA1.1.1680278663.1699989692&semt=ais'></img>
+            </Col>
+            <Col sm={12} md={4} lg={4} xl={4} xxl={4}>
+                <img className=' img-fluid' src='https://img.freepik.com/foto-gratis/retrato-blanco-negro-mujer-tatuajes-cuerpo_23-2150774693.jpg?size=626&ext=jpg&ga=GA1.1.1680278663.1699989692&semt=ais'></img>
+            </Col>
+            <Col sm={12} md={4} lg={4} xl={4} xxl={4}>
+                <img className='imageTattooArtists img-fluid' src='https://img.freepik.com/foto-gratis/mujer-cabello-afro-negro-tatuaje-su-mano_246466-31.jpg?size=626&ext=jpg&ga=GA1.1.1680278663.1699989692&semt=ais'></img>
+            </Col>
+            </Row>
+            <Row className='contactHome'>
+
+            </Row>
         
-        </Container>
+        </Container >
     )
 }
