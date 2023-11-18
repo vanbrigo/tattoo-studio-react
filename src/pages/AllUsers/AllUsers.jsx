@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { getAllUsers } from "../../services/apiCalls"
 import { useSelector } from "react-redux"
 import { userData } from "../userSlice"
+import { Container } from "react-bootstrap"
 
 
 
@@ -17,7 +18,6 @@ export const AllUsers = () => {
             .then(
                 results =>{
                     setUsers(results.data.data)    
-                    console.log(results.data.data)
                 }
                 
             )
@@ -26,7 +26,7 @@ export const AllUsers = () => {
     },[users])
 
     return (
-        <div className="allUsersDesign">
+        <Container className="allUsersDesign">
             {users.length > 0
                 ? (<>
                     {users.map(user => {
@@ -48,6 +48,6 @@ export const AllUsers = () => {
                 )
             }
 
-        </div>
+        </Container>
     )
 }

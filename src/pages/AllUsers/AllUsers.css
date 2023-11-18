@@ -7,21 +7,22 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
+    padding: 0.5em;
+    overflow-x: hidden;
 }
 .userCard{
     height: 3em;
-    width: 70em;
+    width: auto;
     background-color: rgb(118, 160, 160);
     margin: 1em;
 
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    gap: 3em;
+    gap: 1.5em;
     justify-content: space-around;
     align-items: center;
     color: black;
+    padding: 1em;
     
 }
 .userMapDesign{
