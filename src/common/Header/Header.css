@@ -27,3 +27,14 @@
     align-items: center;
 }
 
+@media (max-width: 767px) {
+    .headerDesign{
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+        flex-direction: column;
+    }
+    .routesHeader{
+        width: auto;
+    }
+}

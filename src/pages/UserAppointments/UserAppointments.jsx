@@ -6,6 +6,7 @@ import { getMyAppointments } from "../../services/apiCalls"
 import { useSelector } from "react-redux"
 import { userData } from "../userSlice"
 import { CancelAppointment } from "../CancelAppointment/CancelAppointment"
+import { Container } from "react-bootstrap"
 
 export const UserAppointments=()=>{
     const [appointments,setAppointments]= useState([])
@@ -39,7 +40,7 @@ export const UserAppointments=()=>{
     },[appointments])
 
     return(
-        <div className="userAppointmentsDesign">
+        <Container className="userAppointmentsDesign">
             {click &&
             <CancelAppointment
                 id={idAppointment}
@@ -71,6 +72,6 @@ export const UserAppointments=()=>{
                     )
             }
             
-        </div>
+        </Container>
     )
 }

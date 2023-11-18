@@ -5,10 +5,11 @@
     background-color: rgba(255, 255, 255, 0.985);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    overflow: hidden;
 }
 .appointmentsAvailable{
-    height: 35em;
+    height: auto;
     width: 60em;
     background-color: rgba(151, 150, 150, 0.413);
     display: grid;
@@ -16,4 +17,5 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    margin-top: 3em;
 }

@@ -5,6 +5,7 @@ import { getAllAppointmentsAvailable } from '../../services/apiCalls'
 import { userData } from '../userSlice'
 import { AppointmentAvailableCard } from '../../common/AppointmentAvailableCard/AppointmentAvailableCard'
 import { TakeAppointment } from '../TakeAppointment/TakeAppointment'
+import { Container } from 'react-bootstrap'
 
 export const AppointmentsAvailable=()=>{
     const [appointments,setAppointments]= useState([])
@@ -34,7 +35,7 @@ export const AppointmentsAvailable=()=>{
         }
     },[appointments])
     
-    return (<div className='appointmentAvailableDesign'>
+    return (<Container className='appointmentAvailableDesign'>
         {click &&
             <TakeAppointment
                 id={idAppointment}
@@ -63,5 +64,5 @@ export const AppointmentsAvailable=()=>{
                 <div>Nothing here</div>
             )
         }
-    </div>)
+    </Container>)
 }
