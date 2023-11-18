@@ -1,19 +1,18 @@
-import './CancelAppointment.css'
-import { cancelAppointment } from '../../services/apiCalls'
-import { Button } from '../../common/Button/Button'
 import { useSelector } from 'react-redux'
+import './DeleteAppointment.css'
 import { userData } from '../userSlice'
 import { Container } from 'react-bootstrap'
+import { Button } from '../../common/Button/Button'
+import { deleteAppointment } from '../../services/apiCalls'
 
-
-export const CancelAppointment=({clickState,id,forceFunction})=>{
+export const DeleteAppointment=({clickState,id,forceFunction})=>{
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
     const idAppointment=id
     
 
-    const cancelIt=()=>{
-        cancelAppointment(idAppointment,token)
+    const deleteIt=()=>{
+        deleteAppointment(idAppointment,token)
         .then(results=>{
             console.log(results)
             clickState()
@@ -23,12 +22,12 @@ export const CancelAppointment=({clickState,id,forceFunction})=>{
     }
   
 
-    return(<Container className='cancelAppointmentDesign'>
-    <div className='cancelAppointmentBox'>
+    return(<Container className='deleteAppointmentDesign'>
+    <div className='deleteAppointmentBox'>
     <Button
         style={"cancelAppointmentButton"}
-        functionToDo={cancelIt}
-        title={"Cancel appointment"}
+        functionToDo={deleteIt}
+        title={"Delete appointment"}
         />
     <Button
         style={"closeButton"}

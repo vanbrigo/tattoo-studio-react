@@ -20,7 +20,6 @@
     .appointmentCard{
         width: auto;
         height: auto;
-        flex-direction: column;
         font-size: 0.7em;
     }
 }

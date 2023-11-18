@@ -55,3 +55,6 @@ export const cancelAppointment = async(id,token)=>{
     return await axios.delete(`http://localhost:3000/user/cancelAppointment/${id}`,{headers:{Authorization:`Bearer ${token}`}})
 }
 
+export const deleteAppointment = async(id,token)=>{
+    return await axios.delete(`http://localhost:3000/appointment_available/delete/${id}`,{headers:{Authorization:`Bearer ${token}`}})
+}

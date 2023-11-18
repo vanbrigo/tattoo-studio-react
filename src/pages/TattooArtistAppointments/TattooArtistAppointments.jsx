@@ -6,12 +6,24 @@ import { userData } from "../userSlice"
 import { getAllTattooArtistAppointments } from "../../services/apiCalls"
 import { HeaderButton } from "../../common/HeaderButton/HeaderButton"
 import { Container } from "react-bootstrap"
+import { DeleteAppointment } from "../DeleteAppointment/DeleteAppointment"
 
 export const TattooArtistAppointments=()=>{
     const [appointments,setAppointments]= useState([])
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
+    const [click,setClick]=useState(false)
+    const [idAppointment,setIdAppointment]=useState()
    
+    const handleClick=(key)=>{
+        setClick(!click)
+        setIdAppointment(key)
+    }
+    const forceToUpdate=()=>{
+        setAppointments([])
+    }
+
+
     useEffect(()=>{
         if (appointments.length === 0){
             getAllTattooArtistAppointments(token)
@@ -27,6 +39,12 @@ export const TattooArtistAppointments=()=>{
 
     return(
         <Container className="tattooArtistAppointmentsDesign">
+            {click &&
+            <DeleteAppointment
+                id={idAppointment}
+                clickState={handleClick}
+                forceFunction={forceToUpdate}
+             />}
             <HeaderButton
            path={"/create-appointment"} 
            title="Create appointment"
@@ -41,7 +59,7 @@ export const TattooArtistAppointments=()=>{
                                         style='appointmentIsNotAvailable'
                                         state={appointment.is_available}
                                         tattooArtist={""}
-                                        clickState={""}
+                                        clickState={() => handleClick(appointment.id)}
                                         />
                                         )})
                             }

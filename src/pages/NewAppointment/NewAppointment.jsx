@@ -7,6 +7,7 @@ import { createAppointment } from '../../services/apiCalls';
 import { useSelector } from 'react-redux';
 import { userData } from '../userSlice';
 import { Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 
 export const NewAppointment = () => {
@@ -16,6 +17,7 @@ export const NewAppointment = () => {
         date:"",
         time:"",
     })
+    const navigate=useNavigate()
 
     const functionHandler = (e) => {
         setDetails((prevState)=>({
@@ -56,6 +58,11 @@ export const NewAppointment = () => {
                   style='createAppointmentButton'
                   functionToDo={create}
                   title="Create"
+              />
+              <Button
+                  style='createAppointmentButton'
+                  functionToDo={()=>navigate('/my-schedule')}
+                  title="Back"
               />
           </div>
       </Container>
