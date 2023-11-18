@@ -7,26 +7,44 @@
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    background-image: url(../../images/cat-logo-small.png);
+    /* background-image: url(../../images/cat-logo-small.png); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
 .loginBox{
-    height: 40em;
-    width: 40em;
-    background-color: rgba(167, 167, 167, 0.689);
+    /* height: 40em;
+    width: 40em; */
+    height: 70vh;
+    background-color: rgba(196, 193, 193, 0.761);
     display: flex;
     justify-content:space-evenly;
     align-items: center;
     flex-direction: column;
     gap:1em;
-    border-radius: 2em;
     
 }
 .loginCredentials{
     font-size: 1.2em;
     font-weight: 600;
-    color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
     width: 5em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+@media (max-width: 767px) {
+    .loginBox{
+        width: auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .loginBox{
+        width: auto;
+    }
+}
+@media (min-width: 1024px) {
+    .loginBox{
+        width: 50vh;
+    }
 }

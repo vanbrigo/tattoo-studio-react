@@ -7,6 +7,7 @@ import { logUser } from '../../services/apiCalls'
 import { validator } from '../../services/validations'
 import { useDispatch } from 'react-redux'
 import { login } from "../userSlice"
+import { Container } from 'react-bootstrap'
 
 export const Login = () => {
     const navigate = useNavigate()
@@ -54,7 +55,7 @@ export const Login = () => {
 
     return (
         <div className="loginDesign">
-            <div className='loginBox'>
+            <Container className='loginBox'>
                 <div className='loginCredentials'>Email</div>
             <Input
                 name={"email"}
@@ -82,7 +83,7 @@ export const Login = () => {
             functionToDo={logIn}
             title={"Log in"}
             />
-            </div>
+            </Container>
         </div>
     )
 }

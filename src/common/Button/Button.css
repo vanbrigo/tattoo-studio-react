@@ -2,13 +2,14 @@
     height: 4em;
     width: 4em;
 
-    background-color: rgb(48, 171, 187);
+    background-color: rgb(0, 155, 127);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 2em;
     margin: 1em;
     font-weight: 600;
+    color: whitesmoke;
 }
 .loginButton:hover{
     cursor: pointer;
@@ -72,13 +73,14 @@
     height: 4em;
     width: 4em;
 
-    background-color: rgb(187, 48, 64);
+    background-color: rgb(189, 16, 37);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 2em;
     font-weight: 600;
     margin-top: 4em;
+    color: whitesmoke;
 }
 .signUpButton:hover{
     cursor: pointer;
