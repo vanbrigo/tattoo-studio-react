@@ -2,12 +2,20 @@
 .homeBackground{
     height: 88vh;
     width: 100vw;
-    background-color: rgba(255, 255, 255, 0.931); 
-}
 
+    background-color: rgba(255, 255, 255, 0.931); 
+    /* overflow-x: hidden; */
+    
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
 .homeDesign{
     height: 88vh;
     width: 100vw;
+    padding: 0;
+    margin: 0;
 
     display: flex;
     justify-content: center;
@@ -16,29 +24,42 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    overflow-x: hidden;  
 }
 .homeBox{
-    height: 10em;
+    height: auto;
     width: 100vw;
+    padding: 0;
+    margin: 0;
 
     background-color: #ffffff;
     display: flex;
-    align-items: center;
     justify-content: center;
-
+    align-items: center;
 }
 .homeDesign2{
-    height: 10em;
+    height: auto;
     width: 100vw;
+    padding: 0;
+    margin: 0;
 
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     color: rgb(74, 74, 74);
-    font-size: 2em;
-    
+    font-size: 2rem;
+    flex-direction: column;
 }
-.bigger{
-    height: 15em;
+/* .imageBox{
+    height: auto;
+    width: 50%;
+    
+} */
+.boxImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
