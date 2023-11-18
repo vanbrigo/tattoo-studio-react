@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 export const NewAppointment = () => {
     const rdxCredentials = useSelector(userData)
     const token=rdxCredentials.credentials.token
+    const [msgError,setMsgError]=useState('')
     const [details,setDetails]=useState({
         date:"",
         time:"",
@@ -30,11 +31,17 @@ export const NewAppointment = () => {
         createAppointment(details,token)
         .then(
             resultado=> {
+                if(resultado.data.success===true){
+                    navigate("/my-schedule")
+                }else{
+                    setMsgError(resultado.data.message)
+                }
             console.log(resultado.data)
     })
-        .catch(error=>console.log(error))
-        }
-
+        .catch(error=>{
+            console.log(error)
+        })
+    }
   return (
       <Container className='newAppointmentDesign'>
           <div className='newAppointmentBox'>
@@ -64,6 +71,10 @@ export const NewAppointment = () => {
                   functionToDo={()=>navigate('/my-schedule')}
                   title="Back"
               />
+              {msgError &&
+                <div className='errorCreateAppointment'>
+                    {msgError}
+                </div>}
           </div>
       </Container>
   )
