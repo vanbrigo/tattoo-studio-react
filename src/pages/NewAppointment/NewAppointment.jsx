@@ -6,6 +6,7 @@ import { Button } from '../../common/Button/Button';
 import { createAppointment } from '../../services/apiCalls';
 import { useSelector } from 'react-redux';
 import { userData } from '../userSlice';
+import { Container } from 'react-bootstrap';
 
 
 export const NewAppointment = () => {
@@ -33,7 +34,7 @@ export const NewAppointment = () => {
         }
 
   return (
-      <div className='newAppointmentDesign'>
+      <Container className='newAppointmentDesign'>
           <div className='newAppointmentBox'>
               <InputDate
                   name={"date"}
@@ -57,6 +58,6 @@ export const NewAppointment = () => {
                   title="Create"
               />
           </div>
-      </div>
+      </Container>
   )
 }

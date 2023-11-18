@@ -5,6 +5,7 @@ import { useSelector } from "react-redux"
 import { userData } from "../userSlice"
 import { getAllTattooArtistAppointments } from "../../services/apiCalls"
 import { HeaderButton } from "../../common/HeaderButton/HeaderButton"
+import { Container } from "react-bootstrap"
 
 export const TattooArtistAppointments=()=>{
     const [appointments,setAppointments]= useState([])
@@ -25,7 +26,7 @@ export const TattooArtistAppointments=()=>{
 
 
     return(
-        <div className="tattooArtistAppointmentsDesign">
+        <Container className="tattooArtistAppointmentsDesign">
             <HeaderButton
            path={"/create-appointment"} 
            title="Create appointment"
@@ -51,6 +52,6 @@ export const TattooArtistAppointments=()=>{
                     )
             }
             
-        </div>
+        </Container>
     )
 }

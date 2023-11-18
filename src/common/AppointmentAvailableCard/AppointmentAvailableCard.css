@@ -1,6 +1,6 @@
 .appointmentCardDesign{
-    height: 5em;
-    width: 18em;
+    height: auto;
+    width: auto;
     background-color: rgba(78, 168, 85, 0.836);
     border-radius: 1em;
     margin: 1em;  
