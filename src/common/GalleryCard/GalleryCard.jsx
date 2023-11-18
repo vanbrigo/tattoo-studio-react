@@ -1,3 +1,4 @@
+import { Col} from 'react-bootstrap'
 import './GalleryCard.css'
 
 export const GalleryCard = ({title,image,tattooArtist}) => {

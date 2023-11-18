@@ -4,18 +4,26 @@
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     background-image: url("../../images/cat-tattoo-studio-logo.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    background-color: #ffffff;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    
 }
 .galleryBox{
-    height: 40em;
-    width: 85em;
-    background-color: rgba(105, 95, 95, 0.259);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto;
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    align-items: flex-start;
+    grid-template-columns:repeat(auto-fill, minmax(20em, 1fr));
+    padding: 2em;
+    background-color: rgba(218, 216, 216, 0.422);
+    
+    
+
 }

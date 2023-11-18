@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { GalleryCard } from '../../common/GalleryCard/GalleryCard'
 import { getTattooGallery } from '../../services/apiCalls'
 import './Gallery.css'
+import { Container, Row } from 'react-bootstrap'
 
 export const Gallery = () => {
     const [portfolio,setPortfolio]=useState([])
@@ -12,7 +13,6 @@ export const Gallery = () => {
             .then(
                 appointments =>{
                     setPortfolio(appointments.data.data)    
-                    console.log(appointments.data.data)
                 }
                 
             )
