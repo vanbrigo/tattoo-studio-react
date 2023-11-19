@@ -6,8 +6,8 @@ export const Home = () => {
         <Container fluid className="homeBackground">
             <Row className='socialMedias'>
                 <Col sm={2} lg={2}>
-                <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/FFFFFF/facebook-f.png" alt="facebook-f"/>
-                <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/FFFFFF/instagram-new--v1.png" alt="instagram-new--v1"/>
+                <a href='https://www.facebook.com/'><img width="24" height="24" src="https://img.icons8.com/material-outlined/24/FFFFFF/facebook-f.png" alt="facebook-f" className='socialMediaPage'/></a>
+                <a href='https://www.instagram.com/'><img width="24" height="24" src="https://img.icons8.com/material-outlined/24/FFFFFF/instagram-new--v1.png" alt="instagram-new--v1" className='socialMediaPage'/></a>
                 </Col>
             </Row>
             <Row className='homeDesign'></Row>
