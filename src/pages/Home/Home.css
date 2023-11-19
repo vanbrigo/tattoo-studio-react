@@ -68,5 +68,25 @@
 }
 .contactHome{
     background-color: rgb(14, 14, 14);
-    height: 5em;
+    height: 25em;
+}
+.locationBox{
+    background-image: url("../../images/cat-tattoo-studio-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.informationBox{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color:rgb(132, 129, 129);
+   text-align: center;
+   letter-spacing: 0.5em;
+   line-height: 3em;
+   flex-direction: column;
+}
+.socialMedias{
+    height: 2.5em;
+    background-color: grey;
 }
