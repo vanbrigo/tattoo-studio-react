@@ -37,7 +37,8 @@
 .homeDesign2{
     height: auto;
     width: 100vw;
-    padding: 0;
+    padding-left: 1em;
+    padding-right: 1em;
     margin: 0;
 
     background-color: #ffffff;

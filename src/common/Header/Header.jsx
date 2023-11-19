@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout, userData } from "../../pages/userSlice";
 import {jwtDecode} from 'jwt-decode'
 import { useNavigate } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 
 export const Header = () => {
@@ -20,7 +21,7 @@ export const Header = () => {
     }
     
     return (
-        <div className='headerDesign'>
+        <Container fluid className='headerDesign'>
            <div className='logoHeaderDesign' onClick={()=>navigate('/')}></div>
            {tokenDecoded.role=='super_admin' 
            ?(
@@ -91,6 +92,6 @@ export const Header = () => {
            )}
            
            
-        </div>
+        </Container>
     )
 }

@@ -18,6 +18,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: 0.5em;
+    margin-right: 0.5em;
     cursor: pointer;
 }
 
@@ -38,5 +39,11 @@
     }
     .routesHeader{
         width: auto;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        font-size:xx-large;
     }
 }

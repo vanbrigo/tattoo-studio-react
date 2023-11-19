@@ -1,11 +1,11 @@
 .headerButtonDesign{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
-    font-size: 1.5em;
+    font-size: 1.6vw;
     color:#43413f;
-    margin-right: 1em;
+    margin-right: 1.2em;
     color: #605f5d;
     letter-spacing: 0.4em;
-    
+    flex-direction: row;
 }
 .headerButtonDesign:hover{
     cursor: pointer;
@@ -18,6 +18,7 @@
         width: auto;
         height: auto;
         font-size: 0.7em;
+        margin: 0;
     }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
