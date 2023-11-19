@@ -43,7 +43,7 @@
     height: 2.5em;
     width: 10em;
     background-color: rgba(210, 30, 30, 0.859);
-    border-radius: 1em;
+    border-radius: 1.5em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -87,4 +87,35 @@
     transform: scale(1.1);
     background-color: rgb(90, 24, 26);
     transition: 0.2s;
+}
+.editAppointmentButton{
+    background-color: rgb(12, 93, 99);
+    height: 2.5em;
+    width: 10em;
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 1.2em;
+}
+.editAppointmentButton:hover{
+    cursor: pointer;
+    background-color: rgba(8, 38, 57, 0.859);
+}
+.saveButton{
+    height: 2em;
+    width: 4em;
+    background-color: rgb(18, 135, 57);
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color:whitesmoke
+}
+.saveButton:hover{
+    cursor: pointer;
+    background-color:rgb(11, 88, 37) ;
 }

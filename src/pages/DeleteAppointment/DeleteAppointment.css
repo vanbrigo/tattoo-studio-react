@@ -10,7 +10,7 @@
     position: absolute;
 }
 .deleteAppointmentBox{
-    height: 20vh;
+    height: 30vh;
     width: 30vw;
     background-color: rgba(255, 255, 255, 0.732);
     display: flex;
