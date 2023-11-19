@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { validator } from '../../services/validations'
 import { useSelector } from 'react-redux'
 import { userData } from '../userSlice'
+import { Container } from 'react-bootstrap'
 
 
 export const Register = () => {
@@ -59,7 +60,8 @@ export const Register = () => {
         .catch(error=> console.log(error))
     }
      return (
-         <div className="registerDesign">
+         <Container fluid className="registerDesign">
+            <div className='registerName'>REGISTER</div>
             <div className='registerBox'>
             <Input
             name={"name"}
@@ -107,6 +109,6 @@ export const Register = () => {
             title={"Sign up"}
             />
             </div>
-         </div>
+         </Container>
      )
 }

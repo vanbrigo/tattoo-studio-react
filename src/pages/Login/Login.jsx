@@ -62,6 +62,7 @@ export const Login = () => {
 
     return (
         <div className="loginDesign">
+            <div className='loginName'>LOGIN</div>
             <Container className='loginBox'>
                 <div className='loginCredentials'>Email</div>
             <Input

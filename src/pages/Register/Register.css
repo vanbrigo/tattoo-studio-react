@@ -7,22 +7,36 @@
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    gap:2em
+    gap:2em;
+    padding: 0;
+    margin: 0;
 }
 .registerBox{
     height: 70vh;
     background-color: rgba(167, 167, 167, 0.689);
     display: flex;
-    justify-content:space-evenly;
+    justify-content:center;
     align-items: center;
     flex-direction: column;
-    gap:1.5em;
+    gap:1.2em;
     margin: 1em;
     padding: 2em;
 }
 
 .errorText{
     color: rgb(194, 25, 25);
+}
+.registerName{
+    font-weight: 600;
+    letter-spacing: 1.3em;
+    margin-left: 1.3em;
+    font-size: 2.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    text-decoration-line: line-through;    
+    font-family:sans-serif;
 }
 @media (max-width: 767px) {
     .registerBox{

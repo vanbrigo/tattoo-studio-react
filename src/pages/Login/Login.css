@@ -15,7 +15,7 @@
 .loginBox{
     /* height: 40em;
     width: 40em; */
-    height: 70vh;
+    height: 65vh;
     background-color: rgba(196, 193, 193, 0.761);
     display: flex;
     justify-content:space-evenly;
@@ -33,6 +33,21 @@
     align-items: center;
     display: flex;
 }
+.loginName{
+    font-weight: 600;
+    letter-spacing: 1.3em;
+    margin-left: 1.3em;
+    font-size: 2.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    text-decoration-line: line-through;
+    /* text-decoration-color: brown; */
+    padding-bottom: 0.5em;
+    font-family:sans-serif;
+}
+
 @media (max-width: 767px) {
     .loginBox{
         width: auto;
