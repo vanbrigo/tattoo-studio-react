@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import { userData } from '../userSlice'
 import { Container } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 export const CancelAppointment=({clickState,id,forceFunction})=>{
@@ -17,7 +18,6 @@ export const CancelAppointment=({clickState,id,forceFunction})=>{
     const cancelIt=()=>{
         cancelAppointment(idAppointment,token)
         .then(results=>{
-            console.log(results)
             clickState()
             forceFunction()
         })

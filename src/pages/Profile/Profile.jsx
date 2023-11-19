@@ -18,13 +18,11 @@ export const Profile=()=>{
             getMyProfile(token)
             .then(
                 results =>{ if(results.data.data !== null){
-                    console.log(results.data.data)
                     setProfile(results.data.data)
                 }
                 else{
                     
                 }
-                console.log(results.data.data)
                     setMessageError(results.data.data)
                 }  
             )

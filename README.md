@@ -2,6 +2,8 @@
 
 # Proyecto de frontend
 
+<img src="./src/images/cat-tattoo-studio-logo.png" alt="logo-studio" width="50%">
+
 
 ## <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/1A1A1A/black-cat.png" alt="black-cat"/> BLACK CAT <img width="64" height="64" src="https://img.icons8.com/external-ddara-fill-ddara/64/1A1A1A/external-rose-natural-scent-ddara-fill-ddara.png" alt="external-rose-natural-scent-ddara-fill-ddara"/>
 ## <img width="50" height="50" src="https://img.icons8.com/ios/50/tattoo-machine.png" alt="tattoo-machine"/> Tattoo Studio <img width="50" height="50" src="https://img.icons8.com/ios/50/tattoo-machine.png" alt="tattoo-machine"/>
@@ -28,28 +30,40 @@ El frontend desarrollado con React se centra en la gestión de citas para un est
 
 ## Vistas
 
+[![Home](https://t.gyazo.com/teams/vanbrigo/68330443e0e551d298adf9ff19198408.gif)](https://vanbrigo.gyazo.com/68330443e0e551d298adf9ff19198408)
+
 #### Inicio de Sesión:
 
 Autenticación de usuarios, con la capacidad de iniciar sesión como tatuador o usuario.
+
+[![Login](https://t.gyazo.com/teams/vanbrigo/b0059b477f0833844310d174dab76887.gif)](https://vanbrigo.gyazo.com/b0059b477f0833844310d174dab76887)
+
 
 #### Panel de Tatuador:
 
 Creación de turnos disponibles: Los tatuadores pueden especificar fechas y horarios para los turnos disponibles.
 
+[![Image from Gyazo](https://t.gyazo.com/teams/vanbrigo/d67d07d3e134e22144480f7e43f6f928.gif)](https://vanbrigo.gyazo.com/d67d07d3e134e22144480f7e43f6f928)
+
 #### Reservas de Citas:
 
 Los usuarios pueden visualizar los turnos disponibles y reservar citas indicando el motivo de la cita (tatuaje o piercing).
+
+[![Take an appointment](https://t.gyazo.com/teams/vanbrigo/8c9894a9da050be8eb680c7ae7cc3c20.gif)](https://vanbrigo.gyazo.com/8c9894a9da050be8eb680c7ae7cc3c20)
 
 #### Cancelación de Citas:
 
 Funcionalidad para que los usuarios cancelen citas existentes si es necesario.
 
+[![Cancel an appointment](https://t.gyazo.com/teams/vanbrigo/193e4e7c75a868475bc5ed2f04790b50.gif)](https://vanbrigo.gyazo.com/193e4e7c75a868475bc5ed2f04790b50)
 
 Diseño limpio que facilita la navegación tanto para tatuadores como para usuarios.
 
 #### Vista como super_admin:
 
 El super admin puede iniciar sesion y obtener informacion de todos los clientes, tatuadores, citas disponibles y citas agendadas.
+
+[![super_admin view](https://t.gyazo.com/teams/vanbrigo/9cce580931d301b4593916a3f2d40e2a.gif)](https://vanbrigo.gyazo.com/9cce580931d301b4593916a3f2d40e2a)
 
 ## Instalacion en local
 
@@ -58,10 +72,10 @@ El super admin puede iniciar sesion y obtener informacion de todos los clientes,
 3. Iniciar en desarrollo con `$ npm run dev`
 
 ## Posibles mejoras
-🔹 Poder actualizar datos de los usuarios desde la vista del perfil
-🔹 Busqueda dinamica de citas y tatuadores
-🔹 Bloqueo en calendario de festivos o dias puntuales
-🔹 Asignarle rol de tatuador a un usuario como super_admin
+🔹 Poder actualizar datos de los usuarios desde la vista del perfil<br>
+🔹 Busqueda dinamica de citas y tatuadores<br>
+🔹 Bloqueo en calendario de festivos o dias puntuales<br>
+🔹 Asignarle rol de tatuador a un usuario como super_admin<br>
 
 ## Contacto
 

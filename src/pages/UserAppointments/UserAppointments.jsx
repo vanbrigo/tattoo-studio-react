@@ -18,7 +18,7 @@ export const UserAppointments=()=>{
     const handleClick=(key)=>{
         setClick(!click)
         setIdAppointment(key)
-        console.log(key)
+        
     }
 
     const forceToUpdate=()=>{

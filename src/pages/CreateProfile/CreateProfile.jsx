@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 import { InputDate } from '../../common/InputDate/InputDate'
 import './CreateProfile.css'
 import { userData } from '../userSlice'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Input } from '../../common/Input/Input'
 import { createProfile } from '../../services/apiCalls'
 import { Button } from '../../common/Button/Button'
@@ -31,7 +31,6 @@ export const CreateProfile = () => {
     const addProfile=()=>{
         createProfile(details,token)
         .then(results=>{
-            console.log(results.data)
             navigate('/')
         })
         .catch(error=> console.log(error))
