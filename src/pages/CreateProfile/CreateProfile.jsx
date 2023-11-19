@@ -37,6 +37,12 @@ export const CreateProfile = () => {
         .catch(error=> console.log(error))
 
     }
+    useEffect(()=>{
+        if(!token){
+            navigate('/')
+        }
+    },[token])
+
 
     return(<div className='createProfileDesign'>
         <InputDate

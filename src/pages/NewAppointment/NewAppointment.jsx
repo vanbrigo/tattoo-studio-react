@@ -42,6 +42,11 @@ export const NewAppointment = () => {
             console.log(error)
         })
     }
+    useEffect(()=>{
+        if(!token){
+            navigate('/')
+        }
+    },[rdxCredentials])
   return (
       <Container className='newAppointmentDesign'>
           <div className='newAppointmentBox'>

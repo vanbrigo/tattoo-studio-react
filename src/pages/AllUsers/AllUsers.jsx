@@ -4,6 +4,8 @@ import { getAllUsers } from "../../services/apiCalls"
 import { useSelector } from "react-redux"
 import { userData } from "../userSlice"
 import { Container } from "react-bootstrap"
+import { jwtDecode } from 'jwt-decode'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -11,6 +13,8 @@ export const AllUsers = () => {
     const [users,setUsers]=useState([])
     const rdxCredentials=useSelector(userData)
     const token= rdxCredentials.credentials.token
+    const decodedToken=jwtDecode(token)
+    const navigate=useNavigate()
 
     useEffect(()=>{
         if (users.length === 0){
@@ -24,6 +28,12 @@ export const AllUsers = () => {
             .catch(error=>console.log(error))
         }
     },[users])
+
+    useEffect(()=>{
+        if(decodedToken.role !=='super_admin'){
+            navigate('/')
+        }
+    },[rdxCredentials])
 
     return (
         <Container className="allUsersDesign">

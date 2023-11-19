@@ -4,11 +4,14 @@ import { userData } from '../userSlice'
 import { Container } from 'react-bootstrap'
 import { Button } from '../../common/Button/Button'
 import { deleteAppointment } from '../../services/apiCalls'
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export const DeleteAppointment=({clickState,id,forceFunction})=>{
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
     const idAppointment=id
+    const navigate=useNavigate()
     
 
     const deleteIt=()=>{
@@ -20,7 +23,11 @@ export const DeleteAppointment=({clickState,id,forceFunction})=>{
         })
         .catch(error=>console.log(error))
     }
-  
+    useEffect(()=>{
+        if(!token){
+            navigate('/')
+        }
+    },[rdxCredentials])
 
     return(<Container className='deleteAppointmentDesign'>
     <div className='deleteAppointmentBox'>

@@ -5,12 +5,14 @@ import { useSelector } from "react-redux"
 import { userData } from "../userSlice"
 import dayjs from 'dayjs'
 import { CreateProfile } from "../CreateProfile/CreateProfile"
+import { useNavigate } from "react-router-dom"
 
 export const Profile=()=>{
     const [profile, setProfile]=useState()
     const [messageError, setMessageError]=useState()
     const rdxCredentials = useSelector(userData)
     const token=rdxCredentials.credentials.token
+    const navigate=useNavigate()
     useEffect(()=>{
         if (!profile){
             getMyProfile(token)
@@ -31,6 +33,12 @@ export const Profile=()=>{
             )
         }
     },[profile])
+
+    useEffect(()=>{
+        if(!token){
+            navigate('/')
+        }
+    },[token])
 
 
     return(

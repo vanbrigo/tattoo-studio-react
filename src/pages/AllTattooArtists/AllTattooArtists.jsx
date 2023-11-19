@@ -3,11 +3,15 @@ import './AllTattooArtists.css'
 import { useEffect, useState } from 'react'
 import { userData } from '../userSlice'
 import { getAllTattooArtists } from '../../services/apiCalls'
+import { useNavigate } from 'react-router-dom'
+import { jwtDecode } from 'jwt-decode'
 
 export const AllTattooArtists = () => {
     const [tattooArtists,setTattooArtists]=useState([])
     const rdxCredentials=useSelector(userData)
     const token= rdxCredentials.credentials.token
+    const navigate=useNavigate()
+    const decodedToken=jwtDecode(token)
 
     useEffect(()=>{
         if (tattooArtists.length === 0){
@@ -22,6 +26,12 @@ export const AllTattooArtists = () => {
             .catch(error=>console.log(error))
         }
     },[tattooArtists])
+
+    useEffect(()=>{
+        if(decodedToken.role !== 'super_admin'){
+            navigate('/')
+        }
+    },[rdxCredentials])
 
     return (
         <div className="allTattooArtistsDesign">

@@ -1,14 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Input } from '../../common/Input/Input'
 import './Register.css'
 import { Button } from '../../common/Button/Button'
 import { registerUser } from '../../services/apiCalls'
 import { useNavigate } from 'react-router-dom'
 import { validator } from '../../services/validations'
+import { useSelector } from 'react-redux'
+import { userData } from '../userSlice'
 
 
 export const Register = () => {
     const navigate = useNavigate()
+    const rdxCredentials=useSelector(userData)
 
     const [credenciales,setCredenciales] =useState({
         name:"",
@@ -40,6 +43,12 @@ export const Register = () => {
             [e.target.name + 'Error']: error,
         }));
       }
+    useEffect(()=>{
+        if(rdxCredentials.credentials.token){
+            navigate('/')
+        }
+    },[rdxCredentials])
+
     const signIn =() =>{
         registerUser(credenciales)
         .then(

@@ -1,17 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Login.css'
 import { Input } from '../../common/Input/Input'
 import { Button } from '../../common/Button/Button'
 import { useNavigate } from 'react-router-dom'
 import { logUser } from '../../services/apiCalls'
 import { validator } from '../../services/validations'
-import { useDispatch } from 'react-redux'
-import { login } from "../userSlice"
+import { useDispatch, useSelector } from 'react-redux'
+import { login, userData } from "../userSlice"
 import { Container } from 'react-bootstrap'
 
 export const Login = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const rdxCredentials=useSelector(userData)
 
     const [credenciales,setCredenciales] =useState({
         email:"",
@@ -30,6 +31,12 @@ export const Login = () => {
             [e.target.name]:e.target.value
         }))
     }
+    useEffect(()=>{
+        if(rdxCredentials.credentials.token){
+            navigate('/')
+        }
+    },[rdxCredentials])
+
 
     const errorCheck = (e) => {
 

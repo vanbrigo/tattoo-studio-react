@@ -4,12 +4,14 @@ import { Button } from '../../common/Button/Button'
 import { useSelector } from 'react-redux'
 import { userData } from '../userSlice'
 import { Container } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
 
 export const CancelAppointment=({clickState,id,forceFunction})=>{
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
     const idAppointment=id
+    const navigate=useNavigate()
     
 
     const cancelIt=()=>{
@@ -21,6 +23,11 @@ export const CancelAppointment=({clickState,id,forceFunction})=>{
         })
         .catch(error=>console.log(error))
     }
+    useEffect(()=>{
+        if(!token){
+            navigate('/')
+        }
+    },[rdxCredentials])
   
 
     return(<Container className='cancelAppointmentDesign'>

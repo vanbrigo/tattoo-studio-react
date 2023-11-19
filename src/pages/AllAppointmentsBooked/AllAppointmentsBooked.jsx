@@ -4,11 +4,15 @@ import { useSelector } from 'react-redux'
 import { userData } from '../userSlice'
 import { getAllAppointmentsBooked } from '../../services/apiCalls'
 import dayjs from 'dayjs'
+import { useNavigate } from 'react-router-dom'
+import { jwtDecode } from 'jwt-decode'
 
 export const AllAppointmentsBooked = () => {
     const [appointments,setAppointments]=useState([])
     const rdxCredentials=useSelector(userData)
     const token= rdxCredentials.credentials.token
+    const navigate=useNavigate()
+    const decodedToken=jwtDecode(token)
 
     useEffect(()=>{
         if (appointments.length === 0){
@@ -23,6 +27,13 @@ export const AllAppointmentsBooked = () => {
             .catch(error=>console.log(error))
         }
     },[appointments])
+
+    useEffect(()=>{
+        if(decodedToken.role !== 'super_admin'){
+            navigate('/')
+        }
+    },[rdxCredentials])
+    
     return (
         <div className="appointmentsBookedDesign">
             {appointments.length > 0

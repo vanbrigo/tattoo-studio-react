@@ -1,15 +1,17 @@
 import { useSelector } from 'react-redux'
 import './TakeAppointment.css'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { userData } from '../userSlice'
 import { takeAppointmentAvailable } from '../../services/apiCalls'
 import { Button } from '../../common/Button/Button'
+import { useNavigate } from 'react-router-dom'
 
 export const TakeAppointment=({clickState,id,forceFunction})=>{
     const [purpose,setPurpose]=useState()
     const rdxCredentials=useSelector(userData)
     const token=rdxCredentials.credentials.token
     const idAppointment=id
+    const navigate=useNavigate()
   
 
     const functionHandler = (e) => {
@@ -25,6 +27,11 @@ export const TakeAppointment=({clickState,id,forceFunction})=>{
         })
         .catch(error=>console.log(error))
     }
+    useEffect(()=>{
+        if(!token){
+            navigate('/')
+        }
+    },[rdxCredentials])
 
     return(<div className='takeAppointmentDesign'>
     <div className='takeAppointmentBox'>
