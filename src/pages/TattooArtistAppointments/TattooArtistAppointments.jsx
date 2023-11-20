@@ -23,7 +23,6 @@ export const TattooArtistAppointments=()=>{
         setAppointments([])
     }
 
-
     useEffect(()=>{
         if (appointments.length === 0){
             getAllTattooArtistAppointments(token)
@@ -35,7 +34,6 @@ export const TattooArtistAppointments=()=>{
             .catch(error=>console.log(error))
         }
     },[appointments])
-
 
     return(
         <Container className="tattooArtistAppointmentsDesign">

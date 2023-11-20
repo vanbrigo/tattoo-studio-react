@@ -90,8 +90,7 @@ export const Header = () => {
             </div>
 
            )}
-           
-           
+           <div className="roleName">{tokenDecoded.role=='user' ?(<></>) :(<>{tokenDecoded.role=='tattoo_artist' ?(<>TATTOO ARTIST</>) :(<>{tokenDecoded.role=='super_admin' ?(<>SUPER ADMIN</>) :(<></>)}</>)}</>)}</div>   
         </Container>
     )
 }

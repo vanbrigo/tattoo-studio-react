@@ -19,7 +19,7 @@ export const AllTattooArtists = () => {
             .then(
                 results =>{
                     setTattooArtists(results.data.data)    
-                    console.log(results.data.data)
+                    
                 }
                 
             )

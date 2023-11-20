@@ -31,12 +31,12 @@ export const NewAppointment = () => {
         createAppointment(details,token)
         .then(
             resultado=> {
-                if(resultado.data.success===true){
+                if(resultado.data.success===true && resultado.data.message==='New appointment created successfully'){
                     navigate("/my-schedule")
                 }else{
                     setMsgError(resultado.data.message)
                 }
-            console.log(resultado.data)
+            
     })
         .catch(error=>{
             console.log(error)
