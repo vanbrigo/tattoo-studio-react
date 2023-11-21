@@ -46,7 +46,7 @@ export const AllUsers = () => {
                             <div >{user.name}</div>
                             <div>{user.email}</div>
                             <div>{user.phone_number}</div>
-                            <div>{user.is_active.toString()}</div>
+                            <div>Active:{user.is_active.toString()}</div>
                         </div>
                         )
                     })

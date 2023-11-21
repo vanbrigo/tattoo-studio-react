@@ -11,7 +11,7 @@
     overflow-x: hidden;
 }
 .userCard{
-    height: 3em;
+    height: auto;
     width: auto;
     background-color: rgb(118, 160, 160);
     margin: 1em;
@@ -28,4 +28,10 @@
 .userMapDesign{
     gap:1em;
     color:black
+}
+
+@media (max-width: 1023px) {
+    .userCard{
+        flex-direction: column;
+    }
 }

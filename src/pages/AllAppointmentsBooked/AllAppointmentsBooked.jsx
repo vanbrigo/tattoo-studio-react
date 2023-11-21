@@ -46,7 +46,7 @@ export const AllAppointmentsBooked = () => {
                             <div>{appointment.time}</div>
                             <div>Tattoo Artist: {appointment.user.name}</div>
                             <div>Purpose: {appointment.appointment.purpose}</div>
-                            <div>User: {appointment.appointment.user_id}</div>
+                            <div>User: {appointment.appointment.user.email}</div>
                         </div>
                         )
                     })
