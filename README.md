@@ -70,6 +70,7 @@ El super admin puede iniciar sesion y obtener informacion de todos los clientes,
 1. Clonar el repositorio con el comando `$ git clone [URL del repositorio]`
 2. Instalar dependencias con el comando` $ npm install `
 3. Iniciar en desarrollo con `$ npm run dev`
+Nota: En caso de querer conectar con el backend de este proyecto, es necesario ir al enlace del repositorio del backend https://github.com/vanbrigo/tattoo-studio y seguir los pasos de instalacion.
 
 ## Posibles mejoras
 🔹 Poder actualizar datos de los usuarios desde la vista del perfil<br>
